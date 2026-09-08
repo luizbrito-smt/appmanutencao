@@ -1350,6 +1350,11 @@ function bindPageEvents(){
       if(state.nav.length===2) state.currentChecklist=null;
       state.nav.pop();
       render();
+    } else if(state.view==='equipamentos'){
+      // Permite sair do cadastro/edicao sem exigir preenchimento ou salvamento.
+      state.editingEquip=null;
+      state._equipDraft=null;
+      render();
     } else if(state.view==='historico'){
       state.editingInspecaoView=null; render();
     }
