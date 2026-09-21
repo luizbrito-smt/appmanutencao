@@ -310,6 +310,60 @@ a{color:inherit;}
 @media (min-width:1160px){
   .fab{right:calc(50% - 550px + 20px);}
 }
+
+
+/* ===== Visual refresh 2026 ===== */
+:root{
+  --brand:#22c55e;
+  --brand-strong:#16a34a;
+  --panel:#111b27;
+  --panel-2:#172332;
+  --panel-3:#1d2b3c;
+  --line:rgba(148,163,184,.22);
+  --shadow:0 14px 32px rgba(0,0,0,.24);
+}
+body{background:radial-gradient(circle at 15% 5%,rgba(34,197,94,.07),transparent 24%),linear-gradient(180deg,#0c1622 0%,#0f1a27 100%);}
+#app{max-width:1440px;padding-bottom:100px;}
+.topbar{
+  position:relative;top:auto;padding:18px 24px;background:linear-gradient(135deg,#0d1825 0%,#111f2d 100%);
+  border-bottom:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.16);
+}
+.topbar-brand{gap:16px}.brand-logo{height:52px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.28)}
+.topbar h1{font-size:24px;letter-spacing:.02em}.topbar .sub{font-size:14px;color:#a8b3c3}
+.theme-toggle{top:22px;right:24px;width:42px;height:42px;background:#182536;border-color:var(--line);box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.page{padding:24px;}
+.section-title{font-size:15px;color:#d4dbe5;margin:26px 0 12px;letter-spacing:.09em}
+
+.home-hero{position:relative;overflow:hidden;border:1px solid rgba(34,197,94,.35);border-radius:20px;padding:30px 32px;margin-bottom:20px;background:
+ linear-gradient(90deg,rgba(7,32,43,.96) 0%,rgba(10,34,50,.89) 52%,rgba(12,31,45,.72) 100%),
+ radial-gradient(circle at 80% 20%,rgba(34,197,94,.18),transparent 35%);box-shadow:var(--shadow)}
+.home-hero:after{content:'';position:absolute;right:-90px;top:-120px;width:440px;height:330px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.14),transparent 64%);pointer-events:none}
+.home-hero-line{width:4px;border-radius:8px;background:linear-gradient(#4ade80,#10b981);position:absolute;left:18px;top:32px;bottom:32px}
+.home-hero h2{font-size:34px;line-height:1.1;margin:0 0 8px;color:#fff}.home-hero p{margin:0;color:#d5dce7;font-size:16px}.home-hero .quote{position:absolute;right:30px;top:50%;transform:translateY(-50%);max-width:330px;font-weight:700;color:#dce6ef;text-align:right;font-size:16px}.home-hero .quote strong{color:#4ade80}
+
+.home-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:26px}
+.stat-card{display:flex;align-items:center;gap:14px;background:linear-gradient(145deg,#152131,#101b29);border:1px solid var(--line);border-radius:16px;padding:17px 18px;box-shadow:0 10px 24px rgba(0,0,0,.13)}
+.stat-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;background:rgba(34,197,94,.14);border:1px solid rgba(34,197,94,.24)}
+.stat-card:nth-child(2) .stat-icon{background:rgba(59,130,246,.15);border-color:rgba(59,130,246,.28)}
+.stat-card:nth-child(3) .stat-icon{background:rgba(250,204,21,.12);border-color:rgba(250,204,21,.26)}
+.stat-card:nth-child(4) .stat-icon{background:rgba(148,163,184,.12);border-color:rgba(148,163,184,.24)}
+.stat-value{font-size:26px;font-weight:800;line-height:1;color:#fff}.stat-label{font-size:13px;color:#aeb8c6;margin-top:5px}
+
+.areas-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-end;margin:8px 0 14px}.areas-title-wrap h3{font-size:18px;margin:0 0 4px;color:#fff;text-transform:uppercase;letter-spacing:.05em}.areas-title-wrap p{margin:0;color:#96a3b5;font-size:13px}
+.area-search{width:min(360px,100%);display:flex;align-items:center;gap:9px;background:#142131;border:1px solid var(--line);border-radius:14px;padding:11px 14px}.area-search input{border:none;outline:none;background:transparent;color:#fff;width:100%;font-size:14px}.area-search input::placeholder{color:#77869a}
+
+.home-area-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.area-modern{position:relative;overflow:hidden;min-height:176px;background:linear-gradient(145deg,#152232,#111d2a);border:1px solid var(--line);border-radius:18px;padding:22px;cursor:pointer;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}.area-modern:hover{transform:translateY(-3px);border-color:rgba(34,197,94,.48);box-shadow:0 14px 30px rgba(0,0,0,.22)}
+.area-modern:nth-child(2){border-color:rgba(59,130,246,.35)}.area-modern:nth-child(3){border-color:rgba(249,115,22,.35)}.area-modern:nth-child(4){border-color:rgba(168,85,247,.35)}.area-modern:nth-child(5){border-color:rgba(6,182,212,.35)}
+.area-top{display:flex;align-items:center;gap:14px}.area-icon-modern{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:27px;background:rgba(34,197,94,.14);border:1px solid rgba(34,197,94,.28);flex:none}.area-modern:nth-child(2) .area-icon-modern{background:rgba(59,130,246,.16);border-color:rgba(59,130,246,.3)}.area-modern:nth-child(3) .area-icon-modern{background:rgba(249,115,22,.16);border-color:rgba(249,115,22,.3)}.area-modern:nth-child(4) .area-icon-modern{background:rgba(168,85,247,.16);border-color:rgba(168,85,247,.3)}.area-modern:nth-child(5) .area-icon-modern{background:rgba(6,182,212,.16);border-color:rgba(6,182,212,.3)}
+.area-name{font-size:20px;font-weight:800;color:#fff}.area-desc{font-size:13px;color:#9eabba;margin-top:5px;line-height:1.35}.area-foot{position:absolute;left:22px;right:22px;bottom:17px;padding-top:13px;border-top:1px solid rgba(148,163,184,.16);display:flex;align-items:center;justify-content:space-between}.area-count{font-size:13px;color:#d5dce6}.area-go{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;background:#22c55e;color:#062411}.area-modern:nth-child(2) .area-go{background:#3b82f6;color:#06152d}.area-modern:nth-child(3) .area-go{background:#f59e0b;color:#281604}.area-modern:nth-child(4) .area-go{background:#a855f7;color:#190528}.area-modern:nth-child(5) .area-go{background:#22d3ee;color:#04252b}
+
+.bottomnav{background:rgba(9,17,26,.96);backdrop-filter:blur(14px);border-top:1px solid var(--line);box-shadow:0 -12px 28px rgba(0,0,0,.18)}.bottomnav-inner{max-width:1440px;padding:7px 22px;gap:10px}.navbtn{border-radius:13px;padding:9px 10px 10px;font-size:11px;transition:.15s}.navbtn .ic{font-size:22px}.navbtn.active{background:linear-gradient(135deg,rgba(34,197,94,.22),rgba(34,197,94,.11));color:#fff;box-shadow:inset 0 0 0 1px rgba(34,197,94,.2)}.navbtn.active .ic{filter:drop-shadow(0 0 8px rgba(34,197,94,.36))}
+
+html[data-theme="light"] body{background:#eef2f6}.home-hero{color:#fff}html[data-theme="light"] .topbar{background:#fff}html[data-theme="light"] .topbar h1{color:#121820}html[data-theme="light"] .topbar .sub{color:#64748b}html[data-theme="light"] .theme-toggle{background:#f3f6f9}html[data-theme="light"] .stat-card,html[data-theme="light"] .area-modern,html[data-theme="light"] .area-search{background:#fff;box-shadow:0 8px 24px rgba(15,23,42,.06)}html[data-theme="light"] .stat-value,html[data-theme="light"] .area-name,html[data-theme="light"] .areas-title-wrap h3{color:#111827}html[data-theme="light"] .stat-label,html[data-theme="light"] .area-desc,html[data-theme="light"] .areas-title-wrap p{color:#64748b}html[data-theme="light"] .area-count{color:#475569}html[data-theme="light"] .area-search input{color:#111827}html[data-theme="light"] .bottomnav{background:rgba(255,255,255,.96)}
+
+@media(max-width:1000px){.home-stats{grid-template-columns:repeat(2,1fr)}.home-area-grid{grid-template-columns:repeat(2,1fr)}.home-hero .quote{display:none}}
+@media(max-width:640px){.topbar{padding:14px 58px 14px 14px}.brand-logo{height:42px}.topbar h1{font-size:18px}.page{padding:14px}.home-hero{padding:24px 22px 24px 28px}.home-hero h2{font-size:26px}.home-stats{grid-template-columns:1fr 1fr;gap:9px}.stat-card{padding:13px}.stat-icon{width:40px;height:40px;font-size:20px}.stat-value{font-size:21px}.areas-head{align-items:stretch;flex-direction:column}.area-search{width:100%}.home-area-grid{grid-template-columns:1fr}.area-modern{min-height:158px}.bottomnav-inner{padding:5px 5px}.navbtn{font-size:9.5px;padding:8px 2px}.navbtn .ic{font-size:19px}}
+
 </style>
 </head>
 <body>
@@ -842,6 +896,15 @@ function afterRender(){
     b.addEventListener('click', function(){ setView(b.getAttribute('data-nav')); });
   });
   bindPageEvents();
+  var areaSearch = document.getElementById('areaSearch');
+  if(areaSearch){
+    areaSearch.addEventListener('input', function(){
+      var term = areaSearch.value.trim().toLowerCase();
+      document.querySelectorAll('[data-area-name]').forEach(function(card){
+        card.style.display = !term || card.getAttribute('data-area-name').indexOf(term)>=0 ? '' : 'none';
+      });
+    });
+  }
 }
 
 // ================= CHECKLIST ROUTE =================
@@ -867,15 +930,35 @@ function topbar(title, sub, showBack){
 }
 
 function renderAreaList(){
+  var descriptions = {
+    balancas:'Inspeções de balanças e sistemas de pesagem',
+    checklist_chipmeter:'Verificações do check list e chip meter',
+    patio:'Inspeções de infraestrutura do pátio e buffer',
+    portaria:'Verificações da portaria e controles de acesso',
+    predio_triagem:'Inspeções das instalações da triagem'
+  };
+  var totalItens = AREAS.reduce(function(s,a){ return s+a.unidades.length; },0);
+  var agora = new Date();
+  var inspecMes = state.inspecoes.filter(function(i){ var d=new Date(i.data); return d.getMonth()===agora.getMonth() && d.getFullYear()===agora.getFullYear(); }).length;
+  var pendAbertas = state.pendencias.filter(function(p){ var st=(p.status||'aberta').toLowerCase(); return st!=='concluida' && st!=='concluído' && st!=='concluido' && st!=='cancelada' && st!=='cancelado'; }).length;
+  var dataAtual = agora.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'});
   var items = AREAS.map(function(a){
     var totalUnid = a.unidades.length;
-    return '<div class="list-item card-tap" data-area="'+a.id+'">'+
-      '<div class="li-main"><div class="li-title">'+a.icon+'  '+esc(a.nome)+'</div>'+
-      '<div class="li-sub">'+totalUnid+' '+(totalUnid===1?'item':'itens')+' para inspecionar</div></div>'+
-      '<div class="chev">›</div></div>';
+    return '<div class="area-modern" data-area="'+a.id+'" data-area-name="'+esc(a.nome.toLowerCase())+'">'+
+      '<div class="area-top"><div class="area-icon-modern">'+a.icon+'</div><div><div class="area-name">'+esc(a.nome)+'</div><div class="area-desc">'+esc(descriptions[a.id]||'Área de inspeção')+'</div></div></div>'+
+      '<div class="area-foot"><div class="area-count">☷ &nbsp;'+totalUnid+' '+(totalUnid===1?'item':'itens')+' para inspecionar</div><div class="area-go">›</div></div></div>';
   }).join('');
-  return topbar('Check List de Manutenção','Selecione a área para iniciar a inspeção',false) +
-    '<div class="page"><div class="section-title">Áreas</div><div class="grid-list">'+items+'</div></div>';
+  return topbar('Check List de Manutenção','Gestão eficiente para equipamentos e instalações',false) +
+    '<div class="page">'+
+      '<div class="home-hero"><div class="home-hero-line"></div><h2>Bem-vindo!</h2><p>Selecione uma área abaixo para iniciar a inspeção.</p><div class="quote">“Manutenção hoje,<br><strong>mais produtividade</strong> amanhã.”</div></div>'+
+      '<div class="home-stats">'+
+        '<div class="stat-card"><div class="stat-icon">📋</div><div><div class="stat-value">'+totalItens+'</div><div class="stat-label">Itens no total</div></div></div>'+
+        '<div class="stat-card"><div class="stat-icon">✓</div><div><div class="stat-value">'+inspecMes+'</div><div class="stat-label">Inspeções neste mês</div></div></div>'+
+        '<div class="stat-card"><div class="stat-icon">◷</div><div><div class="stat-value">'+pendAbertas+'</div><div class="stat-label">Pendências em aberto</div></div></div>'+
+        '<div class="stat-card"><div class="stat-icon">▣</div><div><div class="stat-value">'+dataAtual+'</div><div class="stat-label">Atualização de hoje</div></div></div>'+
+      '</div>'+
+      '<div class="areas-head"><div class="areas-title-wrap"><h3>Áreas de inspeção</h3><p>Escolha a área que deseja inspecionar:</p></div><div class="area-search">⌕<input id="areaSearch" type="text" placeholder="Buscar área..."></div></div>'+
+      '<div class="home-area-grid" id="homeAreaGrid">'+items+'</div></div>';
 }
 
 function renderUnidadeList(){
