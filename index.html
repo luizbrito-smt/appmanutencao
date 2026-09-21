@@ -830,7 +830,6 @@ function renderBottomNav(){
     {id:'historico', ic:'🕓', label:'Histórico'},
     {id:'dashboard', ic:'📊', label:'Dashboard'},
     {id:'pendencias', ic:'📌', label:'Pendências'},
-    {id:'chamados', ic:'🎫', label:'Chamados'},
   ];
   var btns = items.map(function(it){
     return '<button class="navbtn '+(state.view===it.id?'active':'')+'" data-nav="'+it.id+'"><span class="ic">'+it.ic+'</span>'+it.label+'</button>';
