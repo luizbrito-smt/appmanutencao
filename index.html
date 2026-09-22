@@ -540,7 +540,7 @@ function T_outros_relacionado() {
 function T_estrutural() {
   return [
     q('danificada', 'Existe alguma parte estrutural danificada?', { obsOn: 'sim', obsLabel: 'Descreva o local', bad: 'sim' }),
-    q('chamado', 'Existe chamado em aberto ou algum plano de ação em andamento?', { obsOn: 'nao', obsLabel: 'Descreva o porquê', bad: 'nao' }),
+    q('chamado', 'Existe chamado em aberto ou algum plano de ação em andamento?', { obsOn: 'sim', obsLabel: 'Descreva o porquê', bad: 'nao' }),
   ];
 }
 function T_ar_condicionado() {
@@ -1243,11 +1243,6 @@ function renderDashboard(){
   var totalPendAbertas = state.pendencias.filter(function(p){return p.status==='aberto'||p.status==='andamento';}).length;
   var mediaConf = total ? Math.round(state.inspecoes.reduce(function(s,i){return s+i.conformidade;},0)/total) : 0;
 
-  var totalChamados = state.chamados.length;
-  var chamAndamento = state.chamados.filter(function(c){return c.status==='andamento';}).length;
-  var chamAguardando = state.chamados.filter(function(c){return c.status==='aguardando';}).length;
-  var chamConcluido = state.chamados.filter(function(c){return c.status==='concluido';}).length;
-  var chamCriticoAberto = state.chamados.filter(function(c){return c.prioridade==='critico' && c.status!=='concluido';}).length;
 
   var porArea = {};
   AREAS.forEach(function(a){ porArea[a.nome] = {conf:[], problemas:0}; });
@@ -1283,14 +1278,6 @@ function renderDashboard(){
     (maiorProblema && maiorProblema.problemas>0 ? '<div class="card" style="border-color:rgba(248,113,113,0.35);"><div class="small-muted" style="margin-bottom:4px;">⚠️ Área com mais problemas identificados</div><div style="font-size:16px;font-weight:700;">'+esc(maiorProblema.nm)+'</div><div class="small-muted">'+maiorProblema.problemas+' não conformidade(s) registrada(s)</div></div>' : '')+
     '<div class="section-title">Índice de conformidade por área</div>'+
     (total ? barsHtml : '<div class="empty"><div class="ic">📊</div><p>Realize inspeções para ver os indicadores</p></div>')+
-    '<div class="section-title">Chamados</div>'+
-    '<div class="stat-grid">'+
-      '<div class="stat-card"><div class="num">'+totalChamados+'</div><div class="lbl">Total de chamados</div></div>'+
-      '<div class="stat-card"><div class="num">'+chamAndamento+'</div><div class="lbl">Em andamento</div></div>'+
-      '<div class="stat-card"><div class="num">'+chamAguardando+'</div><div class="lbl">Aguardando atuação</div></div>'+
-      '<div class="stat-card"><div class="num">'+chamConcluido+'</div><div class="lbl">Concluídos</div></div>'+
-    '</div>'+
-    (chamCriticoAberto>0 ? '<div class="card" style="border-color:rgba(248,113,113,0.35);"><div class="small-muted" style="margin-bottom:4px;">⚠️ Chamados críticos em aberto</div><div style="font-size:16px;font-weight:700;">'+chamCriticoAberto+' chamado(s) crítico(s) pendente(s) de conclusão</div></div>' : '')+
   '</div>';
 }
 
