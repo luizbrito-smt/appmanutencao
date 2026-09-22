@@ -216,6 +216,14 @@ a{color:inherit;}
 .img-thumb{position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--bg-elev2);}
 .img-thumb img{width:100%;height:100%;object-fit:cover;}
 .img-thumb .rm{position:absolute;top:2px;right:2px;background:rgba(0,0,0,0.6);color:#fff;border:none;border-radius:50%;width:20px;height:20px;font-size:12px;cursor:pointer;line-height:1;}
+.img-thumb img{cursor:zoom-in;}
+.evidence-viewer{position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;padding:28px;backdrop-filter:blur(5px);}
+.evidence-viewer-box{position:relative;width:min(96vw,1280px);height:min(92vh,900px);display:flex;align-items:center;justify-content:center;}
+.evidence-viewer img{max-width:100%;max-height:100%;object-fit:contain;border-radius:14px;box-shadow:0 25px 70px rgba(0,0,0,.55);background:#0b1118;}
+.evidence-viewer-close{position:absolute;top:-10px;right:-10px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(15,23,42,.92);color:#fff;font-size:26px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(0,0,0,.35);}
+.evidence-viewer-close:hover{background:#ef4444;}
+.evidence-viewer-caption{position:absolute;left:50%;bottom:-18px;transform:translateX(-50%);color:#fff;background:rgba(15,23,42,.88);padding:8px 14px;border-radius:999px;font-size:13px;white-space:nowrap;border:1px solid rgba(255,255,255,.12);}
+@media(max-width:640px){.evidence-viewer{padding:14px}.evidence-viewer-box{width:100%;height:88vh}.evidence-viewer-close{top:4px;right:4px}.evidence-viewer-caption{bottom:4px}}
 .img-add{aspect-ratio:1;border-radius:8px;border:1.5px dashed var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:22px;cursor:pointer;background:var(--bg-elev2);}
 
 /* Dashboard */
@@ -1131,7 +1139,7 @@ function renderEquipForm(){
   var e=editing?state.equipamentos.find(function(x){return x.id===state.editingEquip;}):{id:uid(),nome:'',serie:'',criticidade:'nao',imagens:[],criadoEm:new Date().toISOString()};
   if(!e){state.editingEquip=null;return renderEquipamentosRoute();}
   state._equipDraft=state._equipDraft||JSON.parse(JSON.stringify(e));var d=state._equipDraft;
-  var imgs=(d.imagens||[]).map(function(img,i){return '<div class="img-thumb"><img src="'+img+'"><button class="rm" data-rmimg="'+i+'">×</button></div>';}).join('');
+  var imgs=(d.imagens||[]).map(function(img,i){return '<div class="img-thumb"><img src="'+img+'" data-viewimg="'+i+'" title="Clique para ampliar" alt="Evidência '+(i+1)+'"><button class="rm" data-rmimg="'+i+'" title="Excluir evidência">×</button></div>';}).join('');
   var addBtn=(d.imagens||[]).length<5?'<div class="img-add" id="btnAddImg">+</div>':'';
   return topbar(editing?'Editar Equipamento':'Novo Equipamento','Cadastro e gerenciamento',true)+'<div class="page page-form">'+
     '<div class="form-section"><div class="form-section-title">1. Identificação</div><div class="form-grid-2"><div class="field"><label>Equipamento</label><input type="text" id="fEquipNome" value="'+esc(d.nome)+'" placeholder="Nome do equipamento"></div><div class="field"><label>Número de série / ID</label><input type="text" id="fEquipSerie" value="'+esc(d.serie)+'" placeholder="Ex: TL-2024-0031"></div></div></div>'+
@@ -1157,6 +1165,25 @@ function compressImage(file, cb){
     img.src = ev.target.result;
   };
   reader.readAsDataURL(file);
+}
+
+function openEvidenceViewer(src, index){
+  var oldViewer = document.querySelector('.evidence-viewer');
+  if(oldViewer) oldViewer.remove();
+  var wrap = document.createElement('div');
+  wrap.className = 'evidence-viewer';
+  wrap.setAttribute('role','dialog');
+  wrap.setAttribute('aria-modal','true');
+  wrap.innerHTML = '<div class="evidence-viewer-box"><img src="'+src+'" alt="Evidência ampliada"><button class="evidence-viewer-close" type="button" aria-label="Fechar">×</button><div class="evidence-viewer-caption">Evidência '+(index+1)+' · clique fora para fechar</div></div>';
+  document.body.appendChild(wrap);
+  var close = function(){
+    wrap.remove();
+    document.removeEventListener('keydown', onKey);
+  };
+  var onKey = function(e){ if(e.key==='Escape') close(); };
+  wrap.querySelector('.evidence-viewer-close').addEventListener('click', close);
+  wrap.addEventListener('click', function(e){ if(e.target===wrap) close(); });
+  document.addEventListener('keydown', onKey);
 }
 
 // ================= HISTORICO ROUTE =================
@@ -1486,6 +1513,15 @@ function bindPageEvents(){
       fImgInput.value = '';
     });
   }
+  document.querySelectorAll('[data-viewimg]').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.stopPropagation();
+      var idx = parseInt(el.getAttribute('data-viewimg'),10);
+      var imgs = (state._equipDraft && state._equipDraft.imagens) ? state._equipDraft.imagens : [];
+      if(imgs[idx]) openEvidenceViewer(imgs[idx], idx);
+    });
+  });
+
   document.querySelectorAll('[data-rmimg]').forEach(function(el){
     el.addEventListener('click', function(e){
       e.stopPropagation();
