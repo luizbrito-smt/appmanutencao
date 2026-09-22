@@ -418,6 +418,75 @@ html[data-theme="light"] .inspection-progress,html[data-theme="light"] .grupo-ca
 .tv-pend{min-height:180px}.tv-pend-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:12px 16px 16px}.tv-pend-row{border:1px solid #283d50;background:#132538;border-radius:13px;padding:11px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:52px}.tv-pend-row b{font-size:13px;display:block;line-height:1.2}.tv-pend-row small{display:block;color:#7e9ab0;font-size:10px;margin-top:4px}.tv-badge-warn,.tv-badge-bad{font-size:10px;font-weight:900;padding:5px 8px;border-radius:999px;white-space:nowrap}.tv-badge-warn{background:rgba(255,200,61,.16);color:#ffd75c}.tv-badge-bad{background:rgba(255,89,89,.16);color:#ff7f7f}.tv-empty{color:#7893a7;padding:20px;text-align:center}.tv-footer{height:32px;display:flex;align-items:center;justify-content:space-between;color:#69869d;font-size:11px;padding:0 4px}.tv-footer span:first-child{color:#2dde86}
 @media (min-width:1800px){.tv-shell{padding:24px 34px 16px}.tv-header{height:90px}.tv-brand img{width:72px;height:62px}.tv-brand h1{font-size:34px}.tv-kpis{gap:16px}.tv-kpi{min-height:128px}.tv-kpi b{font-size:42px}.tv-panel-head h2{font-size:24px}.tv-status{grid-template-columns:280px 1fr}.tv-donut{width:245px;height:245px}.tv-donut:before{inset:46px}.tv-donut b{font-size:52px}.tv-areas{padding-top:18px}.tv-area-row{margin:14px 0}.tv-area-line{font-size:17px}.tv-bar{height:12px}.tv-pend-list{grid-template-columns:repeat(3,1fr);gap:13px}.tv-pend-row{min-height:64px}.tv-pend-row b{font-size:15px}}
 @media (max-width:1100px){.tv-shell{overflow:auto}.tv-kpis{grid-template-columns:repeat(2,1fr)}.tv-main-grid{grid-template-columns:1fr}.tv-pend-list{grid-template-columns:1fr 1fr}.tv-header{height:auto;align-items:flex-start;gap:12px}.tv-header-right{flex-wrap:wrap;justify-content:flex-end}.tv-clock{min-width:190px}.tv-status{grid-template-columns:200px 1fr}.tv-donut{width:180px;height:180px}}
+
+/* ===== MODO APRESENTACAO - EXPANSAO PARA TV / TELA CHEIA ===== */
+body.presentation-active{overflow:hidden;}
+#app.presentation-mode{max-width:none!important;width:100%!important;margin:0!important;padding-bottom:0!important;}
+#app.presentation-mode .tv-shell{width:100%;max-width:none;margin:0 auto;}
+html:fullscreen,html:fullscreen body{width:100%;height:100%;overflow:hidden;background:#06121d;}
+html:fullscreen #app{max-width:none!important;width:100vw!important;height:100vh!important;margin:0!important;padding:0!important;}
+html:fullscreen .tv-shell{
+  width:100vw!important;
+  height:100vh!important;
+  min-height:100vh!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:18px 26px 12px!important;
+  display:grid!important;
+  grid-template-rows:auto auto minmax(0,1fr) auto auto!important;
+  gap:14px!important;
+  box-sizing:border-box!important;
+  overflow:hidden!important;
+}
+html:fullscreen .tv-header,html:fullscreen .tv-kpis,html:fullscreen .tv-main-grid{margin-bottom:0!important;}
+html:fullscreen .tv-header{height:auto!important;min-height:74px!important;padding-bottom:10px!important;}
+html:fullscreen .tv-brand img{width:68px!important;height:58px!important;}
+html:fullscreen .tv-brand h1{font-size:32px!important;}
+html:fullscreen .tv-brand p{font-size:15px!important;}
+html:fullscreen .tv-clock{min-width:265px!important;padding:10px 18px!important;}
+html:fullscreen .tv-clock b{font-size:15px!important;}
+html:fullscreen .tv-clock span{font-size:24px!important;}
+html:fullscreen .tv-btn{padding:13px 18px!important;font-size:14px!important;}
+html:fullscreen .tv-kpis{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:16px!important;}
+html:fullscreen .tv-kpi{min-height:122px!important;padding:16px 18px!important;}
+html:fullscreen .tv-kpi span{font-size:13px!important;}
+html:fullscreen .tv-kpi b{font-size:40px!important;}
+html:fullscreen .tv-kpi small{font-size:12px!important;}
+html:fullscreen .tv-kicon{width:64px!important;height:64px!important;font-size:30px!important;}
+html:fullscreen .tv-ring{width:72px!important;height:72px!important;}
+html:fullscreen .tv-ring b{font-size:21px!important;}
+html:fullscreen .tv-main-grid{
+  grid-template-columns:minmax(0,1.28fr) minmax(430px,.72fr)!important;
+  gap:16px!important;
+  min-height:0!important;
+}
+html:fullscreen .tv-main-grid>.tv-panel{height:100%!important;min-height:0!important;overflow:hidden!important;}
+html:fullscreen .tv-panel-head{padding:16px 20px!important;}
+html:fullscreen .tv-panel-head h2{font-size:24px!important;}
+html:fullscreen .tv-panel-head span{font-size:13px!important;}
+html:fullscreen .tv-areas{padding:14px 20px 12px!important;height:calc(100% - 58px)!important;display:flex!important;flex-direction:column!important;justify-content:space-evenly!important;box-sizing:border-box!important;}
+html:fullscreen .tv-area-row{margin:5px 0!important;}
+html:fullscreen .tv-area-line{font-size:16px!important;}
+html:fullscreen .tv-area-line strong{font-size:18px!important;}
+html:fullscreen .tv-bar{height:12px!important;}
+html:fullscreen .tv-area-row small{font-size:11.5px!important;}
+html:fullscreen .tv-status{grid-template-columns:minmax(250px,.9fr) 1.1fr!important;gap:20px!important;height:calc(100% - 58px)!important;padding:18px 22px!important;box-sizing:border-box!important;}
+html:fullscreen .tv-donut{width:min(25vh,280px)!important;height:min(25vh,280px)!important;min-width:215px!important;min-height:215px!important;}
+html:fullscreen .tv-donut:before{inset:18%!important;}
+html:fullscreen .tv-donut b{font-size:52px!important;}
+html:fullscreen .tv-donut span{font-size:16px!important;}
+html:fullscreen .tv-legend{gap:16px!important;}
+html:fullscreen .tv-legend span{font-size:16px!important;}
+html:fullscreen .tv-legend b{font-size:18px!important;}
+html:fullscreen .tv-pend{min-height:190px!important;}
+html:fullscreen .tv-pend-list{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important;padding:13px 18px 16px!important;}
+html:fullscreen .tv-pend-row{min-height:58px!important;padding:12px 14px!important;}
+html:fullscreen .tv-pend-row b{font-size:14px!important;}
+html:fullscreen .tv-pend-row small{font-size:10.5px!important;}
+html:fullscreen .tv-footer{height:26px!important;font-size:11px!important;}
+@media (min-width:1800px){
+  #app.presentation-mode .tv-shell{padding-left:28px;padding-right:28px;}
+}
 </style>
 </head>
 <body>
@@ -914,6 +983,9 @@ function setView(v){
 
 function render(){
   var app = document.getElementById('app');
+  var isPresentation = state.view === 'apresentacao';
+  app.classList.toggle('presentation-mode', isPresentation);
+  document.body.classList.toggle('presentation-active', isPresentation);
   var html = '';
   if(!state.loaded){
     html = '<div class="empty"><div class="ic">⏳</div><p>Carregando...</p></div>';
@@ -1497,6 +1569,14 @@ function bindPageEvents(){
       if(!document.fullscreenElement && document.documentElement.requestFullscreen) document.documentElement.requestFullscreen();
       else if(document.exitFullscreen) document.exitFullscreen();
     });
+    if(!window.__tvFullscreenBound){
+      window.__tvFullscreenBound=true;
+      document.addEventListener('fullscreenchange',function(){
+        if(state.view==='apresentacao'){
+          document.body.classList.toggle('tv-is-fullscreen', !!document.fullscreenElement);
+        }
+      });
+    }
     var ex=document.getElementById('tvExit');
     if(ex) ex.addEventListener('click',function(){
       if(document.fullscreenElement && document.exitFullscreen) document.exitFullscreen();
