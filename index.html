@@ -391,7 +391,8 @@ function q(id, texto, opts) {
     obsOn: opts.obsOn || null,
     obsLabel: opts.obsLabel || 'Descreva',
     bad: opts.bad === undefined ? null : opts.bad,
-    placeholder: opts.placeholder || ''
+    placeholder: opts.placeholder || '',
+    obsRequires: opts.obsRequires || null
   };
 }
 
@@ -451,7 +452,7 @@ function T_outros() {
 function T_equip_seguranca() {
   return [
     q('funciona', 'O equipamento está funcionando corretamente?', { obsOn: 'nao', obsLabel: 'Descreva o motivo', bad: 'nao' }),
-    q('acao', 'Tem alguma ação sendo tomada para reparo ou substituição?', { obsOn: 'nao', obsLabel: 'Descreva o motivo', bad: 'nao' }),
+    q('acao', 'Tem alguma ação sendo tomada para reparo ou substituição?', { obsOn: 'nao', obsLabel: 'Descreva o motivo', bad: 'nao', obsRequires: { id: 'funciona', resp: 'nao' } }),
     q('seguranca', 'Está sendo utilizada com os equipamentos de segurança obrigatórios?', { obsOn: 'nao', obsLabel: 'Descreva o motivo', bad: 'nao' }),
     q('reparo', 'Necessita de algum reparo ou melhoria no momento?', { obsOn: 'sim', obsLabel: 'Descreva as necessidades', bad: 'sim' }),
     q('atencao', 'Existe algo para deixar como ponto de atenção para este equipamento?', { obsOn: 'sim', obsLabel: 'Descreva a necessidade', bad: 'sim' }),
@@ -460,7 +461,7 @@ function T_equip_seguranca() {
 function T_equip_simples() {
   return [
     q('funciona', 'O equipamento está funcionando corretamente?', { obsOn: 'nao', obsLabel: 'Descreva o motivo', bad: 'nao' }),
-    q('acao', 'Tem alguma ação sendo tomada para reparo ou substituição?', { obsOn: 'nao', obsLabel: 'Descreva o motivo', bad: 'nao' }),
+    q('acao', 'Tem alguma ação sendo tomada para reparo ou substituição?', { obsOn: 'nao', obsLabel: 'Descreva o motivo', bad: 'nao', obsRequires: { id: 'funciona', resp: 'nao' } }),
     q('reparo', 'Necessita de algum reparo ou melhoria no momento?', { obsOn: 'sim', obsLabel: 'Descreva as necessidades', bad: 'sim' }),
     q('atencao', 'Existe algo para deixar como ponto de atenção para este equipamento?', { obsOn: 'sim', obsLabel: 'Descreva a necessidade', bad: 'sim' }),
   ];
@@ -540,7 +541,7 @@ function T_outros_relacionado() {
 function T_estrutural() {
   return [
     q('danificada', 'Existe alguma parte estrutural danificada?', { obsOn: 'sim', obsLabel: 'Descreva o local', bad: 'sim' }),
-    q('chamado', 'Existe chamado em aberto ou algum plano de ação em andamento?', { obsOn: 'sim', obsLabel: 'Descreva o porquê', bad: 'nao' }),
+    q('chamado', 'Existe chamado em aberto ou algum plano de ação em andamento?', { obsOn: 'nao', obsLabel: 'Descreva o porquê', bad: 'nao' }),
   ];
 }
 function T_ar_condicionado() {
@@ -1012,6 +1013,10 @@ function renderChecklistForm(){
         return '<div class="yn-opt yn-'+o+sel+'" data-grupo="'+g.id+'" data-p="'+p.id+'" data-val="'+o+'">'+lbl[o]+'</div>';
       }).join('');
       var showObs = p.obsOn && cur.resp === p.obsOn;
+      if(showObs && p.obsRequires){
+        var req = state.currentChecklist.respostas[g.id] && state.currentChecklist.respostas[g.id][p.obsRequires.id];
+        showObs = !!(req && req.resp === p.obsRequires.resp);
+      }
       return '<div class="q-block">'+
         '<div class="q-text">'+esc(p.texto)+'</div>'+
         '<div class="yn-row">'+optsHtml+'</div>'+
@@ -1243,6 +1248,11 @@ function renderDashboard(){
   var totalPendAbertas = state.pendencias.filter(function(p){return p.status==='aberto'||p.status==='andamento';}).length;
   var mediaConf = total ? Math.round(state.inspecoes.reduce(function(s,i){return s+i.conformidade;},0)/total) : 0;
 
+  var totalChamados = state.chamados.length;
+  var chamAndamento = state.chamados.filter(function(c){return c.status==='andamento';}).length;
+  var chamAguardando = state.chamados.filter(function(c){return c.status==='aguardando';}).length;
+  var chamConcluido = state.chamados.filter(function(c){return c.status==='concluido';}).length;
+  var chamCriticoAberto = state.chamados.filter(function(c){return c.prioridade==='critico' && c.status!=='concluido';}).length;
 
   var porArea = {};
   AREAS.forEach(function(a){ porArea[a.nome] = {conf:[], problemas:0}; });
@@ -1278,6 +1288,14 @@ function renderDashboard(){
     (maiorProblema && maiorProblema.problemas>0 ? '<div class="card" style="border-color:rgba(248,113,113,0.35);"><div class="small-muted" style="margin-bottom:4px;">⚠️ Área com mais problemas identificados</div><div style="font-size:16px;font-weight:700;">'+esc(maiorProblema.nm)+'</div><div class="small-muted">'+maiorProblema.problemas+' não conformidade(s) registrada(s)</div></div>' : '')+
     '<div class="section-title">Índice de conformidade por área</div>'+
     (total ? barsHtml : '<div class="empty"><div class="ic">📊</div><p>Realize inspeções para ver os indicadores</p></div>')+
+    '<div class="section-title">Chamados</div>'+
+    '<div class="stat-grid">'+
+      '<div class="stat-card"><div class="num">'+totalChamados+'</div><div class="lbl">Total de chamados</div></div>'+
+      '<div class="stat-card"><div class="num">'+chamAndamento+'</div><div class="lbl">Em andamento</div></div>'+
+      '<div class="stat-card"><div class="num">'+chamAguardando+'</div><div class="lbl">Aguardando atuação</div></div>'+
+      '<div class="stat-card"><div class="num">'+chamConcluido+'</div><div class="lbl">Concluídos</div></div>'+
+    '</div>'+
+    (chamCriticoAberto>0 ? '<div class="card" style="border-color:rgba(248,113,113,0.35);"><div class="small-muted" style="margin-bottom:4px;">⚠️ Chamados críticos em aberto</div><div style="font-size:16px;font-weight:700;">'+chamCriticoAberto+' chamado(s) crítico(s) pendente(s) de conclusão</div></div>' : '')+
   '</div>';
 }
 
@@ -1444,14 +1462,28 @@ function bindPageEvents(){
       var row = el.parentElement;
       row.querySelectorAll('.yn-opt').forEach(function(o){ o.className='yn-opt yn-'+o.getAttribute('data-val'); });
       el.classList.add('sel-'+v);
-      // toggle obs
-      var wrap = document.querySelector('[data-obswrap="'+g+'-'+p+'"]');
-      if(wrap){
-        // find the question def to check obsOn
-        var showIt = false;
-        AREAS.forEach(function(a){ a.unidades.forEach(function(u){ u.grupos.forEach(function(gr){ if(gr.id===g){ gr.perguntas.forEach(function(pp){ if(pp.id===p && pp.obsOn===v) showIt=true; }); } }); }); });
-        wrap.classList.toggle('show', showIt);
-      }
+      // Atualiza todos os campos condicionais do mesmo grupo.
+      // Isso permite dependencias entre perguntas (ex.: a observacao da pergunta
+      // "acao" so aparece quando "funciona" = Nao e "acao" = Nao).
+      AREAS.forEach(function(a){
+        a.unidades.forEach(function(u){
+          u.grupos.forEach(function(gr){
+            if(gr.id!==g) return;
+            gr.perguntas.forEach(function(pp){
+              if(!pp.obsOn) return;
+              var w = document.querySelector('[data-obswrap="'+g+'-'+pp.id+'"]');
+              if(!w) return;
+              var ans = state.currentChecklist.respostas[g] && state.currentChecklist.respostas[g][pp.id];
+              var showIt = !!(ans && ans.resp === pp.obsOn);
+              if(showIt && pp.obsRequires){
+                var reqAns = state.currentChecklist.respostas[g] && state.currentChecklist.respostas[g][pp.obsRequires.id];
+                showIt = !!(reqAns && reqAns.resp === pp.obsRequires.resp);
+              }
+              w.classList.toggle('show', showIt);
+            });
+          });
+        });
+      });
       updateHeaderProgress();
     });
   });
