@@ -437,6 +437,10 @@ html[data-theme="light"] .inspection-progress,html[data-theme="light"] .grupo-ca
 :fullscreen .tv-footer{height:28px!important;}
 
 @media (max-width:1100px){.tv-shell{overflow:auto}.tv-kpis{grid-template-columns:repeat(2,1fr)}.tv-main-grid{grid-template-columns:1fr}.tv-pend-list{grid-template-columns:1fr 1fr}.tv-header{height:auto;align-items:flex-start;gap:12px}.tv-header-right{flex-wrap:wrap;justify-content:flex-end}.tv-clock{min-width:190px}.tv-status{grid-template-columns:200px 1fr}.tv-donut{width:180px;height:180px}}
+
+/* Dashboard sem gráfico Status das inspeções */
+.dashboard-main-grid.dashboard-main-grid-single{grid-template-columns:1fr!important;}
+.dashboard-main-grid.dashboard-main-grid-single .dash-panel{width:100%;}
 </style>
 </head>
 <body>
@@ -1312,9 +1316,8 @@ function renderDashboard(){
       '<div class="kpi-modern kpi-red"><div class="kicon">⚠</div><div class="kbody"><div class="klab">Não conformes</div><div class="kval">'+naoConformes+'</div><div class="ksub">Inspeções abaixo de 90%</div></div></div>'+ 
       '<div class="kpi-modern kpi-blue"><div class="kicon">🔧</div><div class="kbody"><div class="klab">Pendências abertas</div><div class="kval">'+totalPendAbertas+'</div><div class="ksub">'+pendAbertas+' em aberto · '+pendAndamento+' em andamento</div></div></div>'+ 
     '</div>'+ 
-    '<div class="dashboard-main-grid">'+
+    '<div class="dashboard-main-grid dashboard-main-grid-single">'+
       '<div class="dash-panel"><h3><span class="panel-ico">▥</span>Conformidade por área</h3>'+(total?barsHtml:'<div class="empty"><p>Realize inspeções para ver os indicadores</p></div>')+'</div>'+ 
-      '<div class="dash-panel"><h3><span class="panel-ico">◔</span>Status das inspeções</h3><div class="status-wrap"><div class="status-donut" style="--c1:'+pc1+';--c2:'+pc2+';--c3:'+pc3+';--c4:'+pc4+'"><div class="status-center"><b>'+total+'</b><span>Inspeções</span></div></div><div class="status-legend">'+statusLegend+'</div></div></div>'+ 
     '</div>'+ 
     '<div class="dash-panel dashboard-attention"><h3><span style="color:#ff5959">⚠</span>Pendências que exigem atenção</h3><div class="attention-table"><div class="attention-head"><span>Pendência</span><span>Área</span><span>Status</span><span>Prioridade</span></div>'+(attentionRows||'<div class="attention-empty">Nenhuma pendência em aberto.</div>')+'</div></div>'+ 
     '<div class="section-title">Base operacional</div><div class="stat-grid"><div class="stat-card"><div class="num">'+totalEquip+'</div><div class="lbl">Equipamentos cadastrados</div></div><div class="stat-card"><div class="num">'+AREAS.length+'</div><div class="lbl">Áreas monitoradas</div></div></div>'+ 
