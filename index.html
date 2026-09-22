@@ -362,6 +362,44 @@ html[data-theme="light"] body{background:#eef2f6}.home-hero{color:#fff}html[data
 @media(max-width:1000px){.home-stats{grid-template-columns:repeat(2,1fr)}.home-area-grid{grid-template-columns:repeat(2,1fr)}.home-hero .quote{display:none}}
 @media(max-width:640px){.topbar{padding:14px 58px 14px 14px}.brand-logo{height:42px}.topbar h1{font-size:18px}.page{padding:14px}.home-hero{padding:24px 22px 24px 28px}.home-hero h2{font-size:26px}.home-stats{grid-template-columns:1fr 1fr;gap:9px}.stat-card{padding:13px}.stat-icon{width:40px;height:40px;font-size:20px}.stat-value{font-size:21px}.areas-head{align-items:stretch;flex-direction:column}.area-search{width:100%}.home-area-grid{grid-template-columns:1fr}.area-modern{min-height:158px}.bottomnav-inner{padding:5px 5px}.navbtn{font-size:9.5px;padding:8px 2px}.navbtn .ic{font-size:19px}}
 
+
+/* ===== Layout corporativo unificado 2026.09 ===== */
+:root{
+  --fs-green:#18b86a;--fs-green-2:#22c55e;--fs-blue:#0f2740;--fs-navy:#0b1623;
+  --fs-card:#142231;--fs-card-2:#192a3b;--fs-border:rgba(148,163,184,.18);
+  --fs-text:#f6f8fb;--fs-muted:#9fb0c3;--fs-red:#ef5350;--fs-yellow:#f5b942;--fs-cyan:#3aa7ff;
+}
+body{background:radial-gradient(circle at 12% 0%,rgba(24,184,106,.08),transparent 28%),linear-gradient(180deg,#091522 0%,#0d1926 100%);}
+#app{max-width:1600px;margin:0 auto;padding-bottom:94px;}
+.topbar{display:flex;align-items:center;gap:18px;min-height:86px;padding:16px 24px;background:rgba(9,21,34,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--fs-border);box-shadow:0 12px 28px rgba(0,0,0,.16);}
+.topbar-brand{flex:1;min-width:0;}.brand-logo{width:58px;height:58px;object-fit:contain;border-radius:14px;background:#132333;padding:4px;}.topbar h1{font-size:22px;margin:0;color:#fff;}.topbar .sub{color:var(--fs-muted);font-size:12.5px;margin-top:3px;}
+.back-row{order:-1;margin:0;}.btn-back{background:#142638;border:1px solid var(--fs-border);color:#e8eef5;border-radius:10px;padding:10px 13px;font-weight:700;}
+.topbar-actions{display:flex;align-items:center;gap:10px;margin-left:auto;padding-right:52px;}.topbar-date,.user-chip{display:flex;align-items:center;gap:9px;background:#132333;border:1px solid var(--fs-border);border-radius:14px;padding:9px 12px;color:#e8eef5;min-height:42px}.topbar-date{font-size:12px;color:#b9c6d4}.user-chip .avatar{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;background:linear-gradient(135deg,#1fd27b,#149c5c);font-weight:800;color:white}.user-chip b{font-size:12px}.user-chip small{display:block;color:#8da0b5;font-size:10px;margin-top:1px}.theme-toggle{top:22px;right:24px;}
+.page{padding:24px 24px 28px}.page-form{max-width:1100px;margin:0 auto}.section-title{display:flex;align-items:center;gap:8px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#dfe7ef;margin:22px 0 12px;font-size:13px}.section-title:before{content:'';width:4px;height:18px;border-radius:3px;background:var(--fs-green)}
+.home-hero{min-height:170px;border-radius:22px;margin-bottom:18px}.home-hero h2{font-size:36px}.home-hero p{font-size:16px}.home-stats{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.stat-card{background:linear-gradient(145deg,#142333,#101d2a);border:1px solid var(--fs-border);border-radius:16px;box-shadow:0 10px 22px rgba(0,0,0,.14)}.stat-icon{border-radius:13px;background:rgba(24,184,106,.13);color:#4be28f}.stat-value,.stat-card .num{font-size:28px;font-weight:850}.stat-label,.stat-card .lbl{color:#9fb0c3}.areas-head{margin-top:24px}.areas-title-wrap h3{font-size:18px}.area-search{background:#142333;border:1px solid var(--fs-border);border-radius:13px}.home-area-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.area-modern{border-radius:18px;min-height:175px;background:linear-gradient(145deg,#162636,#111f2c);border:1px solid var(--fs-border);box-shadow:0 10px 24px rgba(0,0,0,.15);transition:.2s ease}.area-modern:hover{transform:translateY(-3px);border-color:rgba(34,197,94,.45);box-shadow:0 14px 30px rgba(0,0,0,.23)}.area-icon-modern{width:56px;height:56px;font-size:27px;border-radius:16px;background:rgba(34,197,94,.12);display:grid;place-items:center}.area-name{font-size:18px}.area-desc{font-size:12px;line-height:1.35}.area-foot{border-top:1px solid rgba(148,163,184,.12);padding-top:12px}.area-go{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#27d37e,#18a45f);display:grid;place-items:center;color:white;font-size:26px}
+
+/* checklist */
+.inspection-progress{background:linear-gradient(145deg,#152536,#101e2c);border:1px solid var(--fs-border);border-radius:16px;padding:14px 16px;margin-bottom:16px}.inspection-progress-top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:9px}.inspection-progress-title{font-weight:800}.inspection-progress-meta{font-size:12px;color:#a5b5c6}.inspection-progress-track{height:9px;background:#26384a;border-radius:999px;overflow:hidden}.inspection-progress-fill{height:100%;background:linear-gradient(90deg,#16a34a,#34d399);border-radius:999px;transition:.2s}.grupo-card{border-radius:17px!important;background:#121f2d!important;border:1px solid var(--fs-border)!important;box-shadow:0 10px 22px rgba(0,0,0,.12);overflow:hidden}.grupo-head{background:#172839!important;border-bottom:1px solid var(--fs-border)!important;padding:14px 16px!important}.grupo-head .gname{font-size:15px!important;letter-spacing:.05em;text-transform:uppercase}.grupo-body{padding:6px 16px 12px!important}.q-block{padding:15px 0!important;border-bottom:1px solid rgba(148,163,184,.13)!important}.q-block:last-child{border-bottom:none!important}.q-text{font-size:15px!important;font-weight:750!important;line-height:1.35}.yn-row{gap:10px!important;margin-top:11px!important}.yn-opt{min-height:48px!important;border-radius:12px!important;font-size:16px!important;font-weight:800!important;display:grid!important;place-items:center!important}.yn-sim{background:rgba(34,197,94,.12)!important;border-color:rgba(34,197,94,.42)!important;color:#46dc86!important}.yn-nao{background:rgba(239,83,80,.12)!important;border-color:rgba(239,83,80,.42)!important;color:#ff7673!important}.yn-nao_possui{background:rgba(148,163,184,.12)!important}.yn-sim.sel-sim{background:#28d978!important;color:white!important;box-shadow:0 7px 18px rgba(34,197,94,.2)}.yn-nao.sel-nao{background:#f26161!important;color:white!important;box-shadow:0 7px 18px rgba(239,83,80,.2)}.q-obs{margin-top:12px!important;padding:12px!important;background:#182736!important;border:1px solid var(--fs-border)!important;border-radius:12px!important}.q-obs textarea,.field input,.field select,.field textarea,.txt-answer,#obsGeral{background:#101c28!important;border:1px solid rgba(148,163,184,.24)!important;border-radius:11px!important;color:#eef4fa!important}.q-obs textarea:focus,.field input:focus,.field select:focus,.field textarea:focus,.txt-answer:focus,#obsGeral:focus{outline:none!important;border-color:rgba(34,197,94,.7)!important;box-shadow:0 0 0 3px rgba(34,197,94,.08)!important}.btn-row{position:sticky;bottom:78px;z-index:20;background:linear-gradient(180deg,rgba(9,21,34,0),rgba(9,21,34,.98) 30%);padding:22px 0 8px}.btn{border-radius:12px!important;min-height:48px!important;font-weight:800!important}.btn:not(.btn-danger){background:linear-gradient(135deg,#18b86a,#159c5a)!important;box-shadow:0 8px 20px rgba(24,184,106,.18)}
+
+/* equipamentos */
+.screen-headline{display:flex;justify-content:space-between;gap:14px;align-items:flex-end;margin-bottom:14px}.screen-headline h2{margin:0;font-size:24px}.screen-headline p{margin:4px 0 0;color:#91a4b9;font-size:12px}.equip-toolbar{display:flex;gap:10px;margin-bottom:16px;align-items:center}.equip-toolbar .search-box{flex:1;margin:0}.equip-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.equip-card{position:relative;background:linear-gradient(145deg,#152536,#111f2d);border:1px solid var(--fs-border);border-radius:17px;padding:16px;cursor:pointer;transition:.18s}.equip-card:hover{transform:translateY(-2px);border-color:rgba(34,197,94,.4)}.equip-card-top{display:flex;gap:12px;align-items:center}.equip-symbol{width:52px;height:52px;border-radius:14px;background:#1d3246;display:grid;place-items:center;font-size:24px}.equip-card h3{font-size:16px;margin:0 0 4px}.equip-card .meta{font-size:12px;color:#95a8bc}.equip-card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid rgba(148,163,184,.12)}.form-section{background:linear-gradient(145deg,#142333,#101d2a);border:1px solid var(--fs-border);border-radius:18px;padding:18px;margin-bottom:14px}.form-section-title{font-size:14px;font-weight:850;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;color:#dce6ef}.form-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-bottom:0!important}.field label{font-weight:700!important;color:#b9c6d4!important;margin-bottom:6px!important}
+
+/* historico */
+.history-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}.history-table{overflow:auto;border:1px solid var(--fs-border);border-radius:16px;background:#101d2a}.history-row{display:grid;grid-template-columns:150px 1.4fr 1fr 120px 110px;gap:10px;align-items:center;padding:12px 14px;border-bottom:1px solid rgba(148,163,184,.12)}.history-row:last-child{border-bottom:none}.history-row.head{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#8fa3b8;background:#162637}.history-row .main{font-weight:750}.history-row .muted{font-size:12px;color:#8fa3b8}
+
+/* dashboard */
+.dashboard-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:18px}.kpi-modern{background:linear-gradient(145deg,#152536,#111f2d);border:1px solid var(--fs-border);border-radius:17px;padding:16px;display:flex;align-items:center;gap:14px}.kpi-modern .kicon{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:rgba(34,197,94,.12)}.kpi-modern .kval{font-size:28px;font-weight:850}.kpi-modern .klab{color:#9fb0c3;font-size:12px}.dashboard-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.dash-panel{background:linear-gradient(145deg,#142333,#101d2a);border:1px solid var(--fs-border);border-radius:18px;padding:18px}.dash-panel h3{margin:0 0 14px;font-size:15px}.bar-row{margin-bottom:15px!important}.bar-track{height:10px!important;background:#243649!important}.bar-fill{border-radius:999px!important}.attention-list{display:flex;flex-direction:column;gap:9px}.attention-item{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;background:#182736;border:1px solid rgba(148,163,184,.13);border-radius:12px;padding:11px}.attention-item b{font-size:13px}.attention-item span{font-size:11px;color:#9cafc1}
+
+/* pendencias */
+.pend-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}.kanban-board{gap:14px!important}.kanban-col{background:#111f2d!important;border:1px solid var(--fs-border)!important;border-radius:16px!important;padding:13px!important}.kanban-col-head{border-bottom:1px solid rgba(148,163,184,.12);padding-bottom:10px!important;margin-bottom:10px!important}.pend-card{background:#172737!important;border:1px solid rgba(148,163,184,.14)!important;border-radius:13px!important;box-shadow:none!important}.pend-card .pt{font-size:13px!important}.pend-card .pd{font-size:11.5px!important;line-height:1.4!important}.fab{background:linear-gradient(135deg,#1fd37a,#119d59)!important;box-shadow:0 10px 30px rgba(24,184,106,.3)!important}
+
+.bottomnav{background:rgba(9,19,31,.96)!important;border-top:1px solid var(--fs-border)!important;backdrop-filter:blur(16px)!important}.bottomnav-inner{max-width:900px}.navbtn{position:relative;color:#93a5b8!important;border-radius:12px!important;transition:.18s}.navbtn.active{color:#54e697!important;background:rgba(34,197,94,.10)!important}.navbtn.active:after{content:'';position:absolute;left:24%;right:24%;bottom:3px;height:3px;border-radius:3px;background:#22c55e}.navbtn .ic{filter:saturate(.9)}
+html[data-theme="light"] body{background:#eef3f7}.topbar,.bottomnav{transition:.2s}.home-hero{color:#fff}.screen-headline h2{color:var(--fg)}
+html[data-theme="light"] .topbar{background:rgba(255,255,255,.97)}html[data-theme="light"] .topbar h1{color:#102030}html[data-theme="light"] .topbar-date,html[data-theme="light"] .user-chip{background:#f5f8fb;color:#223548;border-color:#dbe3ea}html[data-theme="light"] .user-chip small{color:#708090}
+html[data-theme="light"] .inspection-progress,html[data-theme="light"] .grupo-card,html[data-theme="light"] .equip-card,html[data-theme="light"] .form-section,html[data-theme="light"] .history-table,html[data-theme="light"] .kpi-modern,html[data-theme="light"] .dash-panel,html[data-theme="light"] .kanban-col{background:#fff!important;border-color:#d9e2ea!important;box-shadow:0 8px 22px rgba(15,23,42,.05)}html[data-theme="light"] .grupo-head,html[data-theme="light"] .history-row.head{background:#f2f6f9!important}html[data-theme="light"] .q-obs,html[data-theme="light"] .attention-item,html[data-theme="light"] .pend-card{background:#f7f9fb!important}html[data-theme="light"] .field input,html[data-theme="light"] .field select,html[data-theme="light"] .field textarea,html[data-theme="light"] .txt-answer,html[data-theme="light"] #obsGeral,html[data-theme="light"] .q-obs textarea{background:#fff!important;color:#17212b!important;border-color:#d7e0e8!important}html[data-theme="light"] .bottomnav{background:rgba(255,255,255,.97)!important}
+@media(max-width:1050px){.home-area-grid,.equip-grid{grid-template-columns:repeat(2,1fr)}.dashboard-grid{grid-template-columns:1fr}.topbar-date{display:none}}
+@media(max-width:720px){.page{padding:14px}.topbar{padding:12px 14px;min-height:72px}.brand-logo{width:46px;height:46px}.topbar h1{font-size:18px}.topbar-actions{padding-right:44px}.user-chip{display:none}.home-stats,.dashboard-kpis,.history-kpis,.pend-kpis{grid-template-columns:1fr 1fr}.home-area-grid,.equip-grid{grid-template-columns:1fr}.form-grid-2{grid-template-columns:1fr}.history-row{grid-template-columns:1fr 90px}.history-row>*:nth-child(1),.history-row>*:nth-child(3),.history-row>*:nth-child(5){display:none}.home-hero h2{font-size:28px}.btn-row{bottom:68px}.screen-headline{align-items:flex-start;flex-direction:column}.equip-toolbar{flex-direction:column;align-items:stretch}.bottomnav-inner{gap:2px}.navbtn{font-size:9px}}
+
 </style>
 </head>
 <body>
@@ -920,11 +958,11 @@ function topbar(title, sub, showBack){
   var back = showBack ? '<div class="back-row"><button class="btn-back" id="btnBack">← Voltar</button></div>' : '';
   var themeIcon = state.theme==='light' ? '🌙' : '☀️';
   var themeBtn = '<button class="theme-toggle" id="themeToggle" title="Alternar tema">'+themeIcon+'</button>';
-  return '<div class="topbar">'+themeBtn+back+
-    '<div class="topbar-brand">'+
-      '<img src="'+LOGO_SRC+'" class="brand-logo" alt="Logo">'+
-      '<div class="topbar-titles"><h1>'+esc(title)+'</h1>'+(sub?'<div class="sub">'+esc(sub)+'</div>':'')+'</div>'+
-    '</div>'+
+  var now = new Date();
+  var dateTxt = now.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric'});
+  return '<div class="topbar">'+back+
+    '<div class="topbar-brand"><img src="'+LOGO_SRC+'" class="brand-logo" alt="Logo"><div class="topbar-titles"><h1>'+esc(title)+'</h1>'+(sub?'<div class="sub">'+esc(sub)+'</div>':'')+'</div></div>'+
+    '<div class="topbar-actions"><div class="topbar-date">📅 <span>'+dateTxt+'</span></div><div class="user-chip"><div class="avatar">LB</div><div><b>Luiz Brito</b><small>Administrador</small></div></div></div>'+themeBtn+
   '</div>';
 }
 
@@ -987,55 +1025,30 @@ function renderChecklistForm(){
   var area = AREAS.find(function(a){return a.id===state.nav[0];});
   var unidade = area.unidades.find(function(u){return u.id===state.nav[1];});
   if(!state.currentChecklist || state.currentChecklist.unidadeId !== unidade.id){
-    state.currentChecklist = {
-      areaId: area.id, areaNome: area.nome,
-      unidadeId: unidade.id, unidadeNome: unidade.nome,
-      respostas: buildRespostasSkeleton(unidade),
-      inspetorObs: ''
-    };
+    state.currentChecklist = {areaId:area.id,areaNome:area.nome,unidadeId:unidade.id,unidadeNome:unidade.nome,respostas:buildRespostasSkeleton(unidade),inspetorObs:''};
   }
-  var answered = 0, total = 0;
-  unidade.grupos.forEach(function(g){ g.perguntas.forEach(function(p){ total++; if(state.currentChecklist.respostas[g.id][p.id].resp) answered++; }); });
-
+  var answered=0,total=0;
+  unidade.grupos.forEach(function(g){g.perguntas.forEach(function(p){total++;var r=state.currentChecklist.respostas[g.id][p.id];if(r.resp || (p.type==='text' && r.obs)) answered++;});});
+  var progress = total ? Math.round((answered/total)*100) : 0;
   var gruposHtml = unidade.grupos.map(function(g){
     var qhtml = g.perguntas.map(function(p){
       var cur = state.currentChecklist.respostas[g.id][p.id];
-      if(p.type === 'text'){
-        return '<div class="q-block">'+
-          '<div class="q-text">'+esc(p.texto)+'</div>'+
-          '<input type="text" class="txt-answer" data-grupo="'+g.id+'" data-p="'+p.id+'" placeholder="'+esc(p.placeholder)+'" value="'+esc(cur.obs)+'" style="width:100%;background:var(--bg-elev2);border:1px solid var(--border);border-radius:8px;padding:10px;color:var(--fg);font-size:13.5px;">'+
-        '</div>';
+      if(p.type==='text'){
+        return '<div class="q-block"><div class="q-text">'+esc(p.texto)+'</div><input type="text" class="txt-answer" data-grupo="'+g.id+'" data-p="'+p.id+'" placeholder="'+esc(p.placeholder)+'" value="'+esc(cur.obs)+'" style="width:100%;padding:11px;font-size:13.5px"></div>';
       }
-      var opts = p.type === 'yn3' ? ['sim','nao','nao_possui'] : ['sim','nao'];
-      var lbl = {sim:'Sim', nao:'Não', nao_possui:'Não possui'};
-      var optsHtml = opts.map(function(o){
-        var sel = cur.resp===o ? ' sel-'+o : '';
-        return '<div class="yn-opt yn-'+o+sel+'" data-grupo="'+g.id+'" data-p="'+p.id+'" data-val="'+o+'">'+lbl[o]+'</div>';
-      }).join('');
-      var showObs = p.obsOn && cur.resp === p.obsOn;
-      if(showObs && p.obsRequires){
-        var req = state.currentChecklist.respostas[g.id] && state.currentChecklist.respostas[g.id][p.obsRequires.id];
-        showObs = !!(req && req.resp === p.obsRequires.resp);
-      }
-      return '<div class="q-block">'+
-        '<div class="q-text">'+esc(p.texto)+'</div>'+
-        '<div class="yn-row">'+optsHtml+'</div>'+
-        (p.obsOn ? '<div class="q-obs '+(showObs?'show':'')+'" data-obswrap="'+g.id+'-'+p.id+'">'+
-          '<label>'+esc(p.obsLabel)+'</label>'+
-          '<textarea data-grupo="'+g.id+'" data-p="'+p.id+'" class="obs-answer">'+esc(cur.obs)+'</textarea>'+
-        '</div>' : '') +
-      '</div>';
+      var opts=p.type==='yn3'?['sim','nao','nao_possui']:['sim','nao'];
+      var lbl={sim:'Sim',nao:'Não',nao_possui:'Não possui'};
+      var optsHtml=opts.map(function(o){var sel=cur.resp===o?' sel-'+o:'';return '<div class="yn-opt yn-'+o+sel+'" data-grupo="'+g.id+'" data-p="'+p.id+'" data-val="'+o+'">'+lbl[o]+'</div>';}).join('');
+      var showObs=p.obsOn && cur.resp===p.obsOn;
+      if(showObs && p.obsRequires){var req=state.currentChecklist.respostas[g.id]&&state.currentChecklist.respostas[g.id][p.obsRequires.id];showObs=!!(req&&req.resp===p.obsRequires.resp);}
+      return '<div class="q-block"><div class="q-text">'+esc(p.texto)+'</div><div class="yn-row">'+optsHtml+'</div>'+
+        (p.obsOn?'<div class="q-obs '+(showObs?'show':'')+'" data-obswrap="'+g.id+'-'+p.id+'"><label>'+esc(p.obsLabel)+'</label><textarea data-grupo="'+g.id+'" data-p="'+p.id+'" class="obs-answer">'+esc(cur.obs)+'</textarea></div>':'')+'</div>';
     }).join('');
     return '<div class="grupo-card"><div class="grupo-head"><div class="gname">'+esc(g.nome)+'</div></div><div class="grupo-body">'+qhtml+'</div></div>';
   }).join('');
-
-  return topbar(unidade.nome, area.nome+' · '+answered+'/'+total+' respondidas', true) +
-    '<div class="page page-form">'+
-      gruposHtml+
-      '<div class="section-title">Observações gerais</div>'+
-      '<div class="card"><textarea id="obsGeral" placeholder="Observações adicionais sobre esta inspeção (opcional)" style="width:100%;background:var(--bg-elev2);border:1px solid var(--border);border-radius:8px;padding:10px;color:var(--fg);font-size:13.5px;min-height:70px;">'+esc(state.currentChecklist.inspetorObs)+'</textarea></div>'+
-      '<div class="btn-row"><button class="btn" id="btnSalvarInspecao">Salvar Inspeção</button></div>'+
-    '</div>';
+  return topbar(unidade.nome,area.nome+' · Inspeção em andamento',true)+
+    '<div class="page page-form"><div class="inspection-progress"><div class="inspection-progress-top"><div class="inspection-progress-title">Progresso da inspeção</div><div class="inspection-progress-meta">'+answered+' de '+total+' respondidas · '+progress+'%</div></div><div class="inspection-progress-track"><div class="inspection-progress-fill" style="width:'+progress+'%"></div></div></div>'+gruposHtml+
+    '<div class="section-title">Observações gerais</div><div class="card"><textarea id="obsGeral" placeholder="Observações adicionais sobre esta inspeção (opcional)" style="width:100%;padding:11px;min-height:80px">'+esc(state.currentChecklist.inspetorObs)+'</textarea></div><div class="btn-row"><button class="btn" id="btnSalvarInspecao">✓ Salvar Inspeção</button></div></div>';
 }
 
 function computeInspecaoStats(unidade, respostas){
@@ -1104,57 +1117,27 @@ async function salvarInspecao(){
 // ================= EQUIPAMENTOS ROUTE =================
 function renderEquipamentosRoute(){
   if(state.editingEquip !== null) return renderEquipForm();
-  var list = state.equipamentos.filter(function(e){
-    var s = (state.equipSearch||'').toLowerCase();
-    if(!s) return true;
-    return (e.nome||'').toLowerCase().indexOf(s)>=0 || (e.serie||'').toLowerCase().indexOf(s)>=0;
-  });
-  var items = list.map(function(e){
-    var crit = e.criticidade==='sim' ? '<span class="badge badge-bad">Crítico</span>' : e.criticidade==='moderado' ? '<span class="badge badge-warn">Moderado</span>' : '<span class="badge badge-neutral">Não crítico</span>';
-    return '<div class="list-item card-tap" data-equip="'+e.id+'">'+
-      '<div class="li-main"><div class="li-title">'+esc(e.nome)+'</div>'+
-      '<div class="li-sub">'+esc(e.serie||'—')+' · '+(e.imagens?e.imagens.length:0)+' evidência(s)</div></div>'+
-      crit+'</div>';
+  var list=state.equipamentos.filter(function(e){var q=(state.equipSearch||'').toLowerCase();return !q||(e.nome||'').toLowerCase().indexOf(q)>=0||(e.serie||'').toLowerCase().indexOf(q)>=0;});
+  var cards=list.map(function(e){
+    var crit=e.criticidade==='sim'?'<span class="badge badge-bad">Crítico</span>':e.criticidade==='moderado'?'<span class="badge badge-warn">Moderado</span>':'<span class="badge badge-ok">Baixa</span>';
+    return '<div class="equip-card card-tap" data-equip="'+e.id+'"><div class="equip-card-top"><div class="equip-symbol">⚙️</div><div><h3>'+esc(e.nome)+'</h3><div class="meta">ID: '+esc(e.serie||'Não informado')+'</div></div></div><div class="equip-card-foot"><span class="meta">📷 '+(e.imagens?e.imagens.length:0)+' evidência(s)</span>'+crit+'</div></div>';
   }).join('');
-  var body = list.length ? '<div class="grid-list">'+items+'</div>' :
-    '<div class="empty"><div class="ic">🗄️</div><p>Nenhum equipamento cadastrado</p><p class="small-muted">Toque em + para cadastrar o primeiro</p></div>';
-
-  return topbar('Base de Equipamentos', state.equipamentos.length+' cadastrado(s)', false) +
-    '<div class="page">'+
-    '<div class="search-box"><span class="ic">🔎</span><input id="equipSearchInput" type="text" placeholder="Buscar por nome ou nº de série/ID" value="'+esc(state.equipSearch)+'"></div>'+
-    body+
-    '</div>'+
-    '<button class="fab" id="btnNovoEquip">+</button>';
+  var body=list.length?'<div class="equip-grid">'+cards+'</div>':'<div class="empty"><div class="ic">🗄️</div><p>Nenhum equipamento cadastrado</p><p class="small-muted">Toque em + para cadastrar o primeiro</p></div>';
+  return topbar('Equipamentos','Gerencie os equipamentos cadastrados',false)+'<div class="page"><div class="screen-headline"><div><h2>Base de equipamentos</h2><p>'+state.equipamentos.length+' equipamento(s) cadastrado(s)</p></div></div><div class="equip-toolbar"><div class="search-box"><span class="ic">🔎</span><input id="equipSearchInput" type="text" placeholder="Buscar equipamento..." value="'+esc(state.equipSearch)+'"></div></div>'+body+'</div><button class="fab" id="btnNovoEquip">+</button>';
 }
 
 function renderEquipForm(){
-  var editing = state.editingEquip !== 'new';
-  var e = editing ? state.equipamentos.find(function(x){return x.id===state.editingEquip;}) : {id:uid(), nome:'', serie:'', criticidade:'nao', imagens:[], criadoEm:new Date().toISOString()};
-  if(!e){ state.editingEquip=null; return renderEquipamentosRoute(); }
-  state._equipDraft = state._equipDraft || JSON.parse(JSON.stringify(e));
-  var d = state._equipDraft;
-
-  var imgs = (d.imagens||[]).map(function(img,i){
-    return '<div class="img-thumb"><img src="'+img+'"><button class="rm" data-rmimg="'+i+'">×</button></div>';
-  }).join('');
-  var addBtn = (d.imagens||[]).length < 5 ? '<div class="img-add" id="btnAddImg">+</div>' : '';
-
-  return topbar(editing?'Editar Equipamento':'Cadastrar Equipamento','Base de Equipamentos',true)+
-  '<div class="page page-form">'+
-    '<div class="field"><label>Equipamento</label><input type="text" id="fEquipNome" value="'+esc(d.nome)+'" placeholder="Nome do equipamento"></div>'+
-    '<div class="field"><label>Número de série / imobilizado ou ID</label><input type="text" id="fEquipSerie" value="'+esc(d.serie)+'" placeholder="Ex: TL-2024-0031"></div>'+
-    '<div class="field"><label>Criticidade</label><select id="fEquipCrit">'+
-      '<option value="sim" '+(d.criticidade==='sim'?'selected':'')+'>Sim (crítico)</option>'+
-      '<option value="moderado" '+(d.criticidade==='moderado'?'selected':'')+'>Moderado</option>'+
-      '<option value="nao" '+(d.criticidade==='nao'?'selected':'')+'>Não</option>'+
-    '</select></div>'+
-    '<div class="field"><label>Evidências (até 5 imagens)</label><div class="img-grid">'+imgs+addBtn+'</div>'+
-      '<input type="file" id="fEquipImgInput" accept="image/*" style="display:none">'+
-    '</div>'+
-    '<div class="btn-row"><button class="btn" id="btnSalvarEquip">Salvar</button>'+
-    (editing?'<button class="btn btn-danger" id="btnExcluirEquip" style="width:auto;flex-shrink:0;">Excluir</button>':'')+
-    '</div>'+
-  '</div>';
+  var editing=state.editingEquip!=='new';
+  var e=editing?state.equipamentos.find(function(x){return x.id===state.editingEquip;}):{id:uid(),nome:'',serie:'',criticidade:'nao',imagens:[],criadoEm:new Date().toISOString()};
+  if(!e){state.editingEquip=null;return renderEquipamentosRoute();}
+  state._equipDraft=state._equipDraft||JSON.parse(JSON.stringify(e));var d=state._equipDraft;
+  var imgs=(d.imagens||[]).map(function(img,i){return '<div class="img-thumb"><img src="'+img+'"><button class="rm" data-rmimg="'+i+'">×</button></div>';}).join('');
+  var addBtn=(d.imagens||[]).length<5?'<div class="img-add" id="btnAddImg">+</div>':'';
+  return topbar(editing?'Editar Equipamento':'Novo Equipamento','Cadastro e gerenciamento',true)+'<div class="page page-form">'+
+    '<div class="form-section"><div class="form-section-title">1. Identificação</div><div class="form-grid-2"><div class="field"><label>Equipamento</label><input type="text" id="fEquipNome" value="'+esc(d.nome)+'" placeholder="Nome do equipamento"></div><div class="field"><label>Número de série / ID</label><input type="text" id="fEquipSerie" value="'+esc(d.serie)+'" placeholder="Ex: TL-2024-0031"></div></div></div>'+
+    '<div class="form-section"><div class="form-section-title">2. Características</div><div class="field"><label>Criticidade</label><select id="fEquipCrit"><option value="sim" '+(d.criticidade==='sim'?'selected':'')+'>Crítico</option><option value="moderado" '+(d.criticidade==='moderado'?'selected':'')+'>Moderado</option><option value="nao" '+(d.criticidade==='nao'?'selected':'')+'>Baixa</option></select></div></div>'+
+    '<div class="form-section"><div class="form-section-title">3. Evidências</div><div class="small-muted" style="margin-bottom:10px">Até 5 imagens por equipamento</div><div class="img-grid">'+imgs+addBtn+'</div><input type="file" id="fEquipImgInput" accept="image/*" style="display:none"></div>'+
+    '<div class="btn-row"><button class="btn" id="btnSalvarEquip">Salvar equipamento</button>'+(editing?'<button class="btn btn-danger" id="btnExcluirEquip" style="width:auto;flex-shrink:0">Excluir</button>':'')+'</div></div>';
 }
 
 function compressImage(file, cb){
@@ -1178,29 +1161,14 @@ function compressImage(file, cb){
 
 // ================= HISTORICO ROUTE =================
 function renderHistoricoRoute(){
-  if(state.editingInspecaoView){
-    return renderInspecaoDetail();
-  }
-  var areasFiltro = ['todas'].concat(AREAS.map(function(a){return a.nome;}));
-  var pills = areasFiltro.map(function(a){
-    return '<div class="pill '+(state.historicoFiltro===a?'active':'')+'" data-filtro="'+esc(a)+'">'+(a==='todas'?'Todas':esc(a))+'</div>';
-  }).join('');
-
-  var list = state.inspecoes.filter(function(i){ return state.historicoFiltro==='todas' || i.areaNome===state.historicoFiltro; });
-
-  var items = list.map(function(i){
-    var badge = i.conformidade>=90 ? 'badge-ok' : i.conformidade>=70 ? 'badge-warn' : 'badge-bad';
-    return '<div class="list-item card-tap" data-inspecao="'+i.id+'">'+
-      '<div class="li-main"><div class="li-title">'+esc(i.unidadeNome)+'</div>'+
-      '<div class="li-sub">'+esc(i.areaNome)+' · '+fmtDate(i.data)+'</div></div>'+
-      '<span class="badge '+badge+'">'+i.conformidade+'%</span></div>';
-  }).join('');
-
-  var body = list.length ? '<div class="grid-list">'+items+'</div>' :
-    '<div class="empty"><div class="ic">🕓</div><p>Nenhuma inspeção registrada ainda</p></div>';
-
-  return topbar('Histórico de Inspeções', state.inspecoes.length+' inspeção(ões) registradas', false)+
-    '<div class="page"><div class="pill-row">'+pills+'</div>'+body+'</div>';
+  if(state.editingInspecaoView) return renderInspecaoDetail();
+  var areasFiltro=['todas'].concat(AREAS.map(function(a){return a.nome;}));
+  var pills=areasFiltro.map(function(a){return '<div class="pill '+(state.historicoFiltro===a?'active':'')+'" data-filtro="'+esc(a)+'">'+(a==='todas'?'Todas':esc(a))+'</div>';}).join('');
+  var list=state.inspecoes.filter(function(i){return state.historicoFiltro==='todas'||i.areaNome===state.historicoFiltro;});
+  var total=state.inspecoes.length, conformes=state.inspecoes.filter(function(i){return i.conformidade>=90;}).length, naoConf=total-conformes, pend=state.pendencias.length;
+  var rows=list.map(function(i){var badge=i.conformidade>=90?'badge-ok':i.conformidade>=70?'badge-warn':'badge-bad';return '<div class="history-row card-tap" data-inspecao="'+i.id+'"><div class="muted">'+fmtDate(i.data)+'</div><div><div class="main">'+esc(i.unidadeNome)+'</div><div class="muted">'+esc(i.areaNome)+'</div></div><div class="muted">'+esc(i.areaNome)+'</div><span class="badge '+badge+'">'+i.conformidade+'%</span><div class="muted">Detalhes ›</div></div>';}).join('');
+  var table=list.length?'<div class="history-table"><div class="history-row head"><div>Data</div><div>Equipamento / Item</div><div>Área</div><div>Resultado</div><div>Ações</div></div>'+rows+'</div>':'<div class="empty"><div class="ic">🕓</div><p>Nenhuma inspeção registrada ainda</p></div>';
+  return topbar('Histórico','Registros de inspeções realizadas',false)+'<div class="page"><div class="history-kpis"><div class="stat-card"><div class="num">'+total+'</div><div class="lbl">Inspeções realizadas</div></div><div class="stat-card"><div class="num">'+conformes+'</div><div class="lbl">Conformes</div></div><div class="stat-card"><div class="num">'+naoConf+'</div><div class="lbl">Não conformes</div></div><div class="stat-card"><div class="num">'+pend+'</div><div class="lbl">Pendências geradas</div></div></div><div class="pill-row">'+pills+'</div>'+table+'</div>';
 }
 
 function renderInspecaoDetail(){
@@ -1243,88 +1211,25 @@ function renderInspecaoDetail(){
 
 // ================= DASHBOARD =================
 function renderDashboard(){
-  var total = state.inspecoes.length;
-  var totalEquip = state.equipamentos.length;
-  var totalPendAbertas = state.pendencias.filter(function(p){return p.status==='aberto'||p.status==='andamento';}).length;
-  var mediaConf = total ? Math.round(state.inspecoes.reduce(function(s,i){return s+i.conformidade;},0)/total) : 0;
-
-  var totalChamados = state.chamados.length;
-  var chamAndamento = state.chamados.filter(function(c){return c.status==='andamento';}).length;
-  var chamAguardando = state.chamados.filter(function(c){return c.status==='aguardando';}).length;
-  var chamConcluido = state.chamados.filter(function(c){return c.status==='concluido';}).length;
-  var chamCriticoAberto = state.chamados.filter(function(c){return c.prioridade==='critico' && c.status!=='concluido';}).length;
-
-  var porArea = {};
-  AREAS.forEach(function(a){ porArea[a.nome] = {conf:[], problemas:0}; });
-  state.inspecoes.forEach(function(i){
-    if(!porArea[i.areaNome]) porArea[i.areaNome] = {conf:[], problemas:0};
-    porArea[i.areaNome].conf.push(i.conformidade);
-    porArea[i.areaNome].problemas += i.problemas;
-  });
-  var areaRows = Object.keys(porArea).map(function(nm){
-    var d = porArea[nm];
-    var media = d.conf.length ? Math.round(d.conf.reduce(function(a,b){return a+b;},0)/d.conf.length) : null;
-    return {nm:nm, media:media, problemas:d.problemas, count:d.conf.length};
-  });
-
-  var maiorProblema = areaRows.slice().sort(function(a,b){return b.problemas-a.problemas;})[0];
-
-  var barsHtml = areaRows.map(function(r){
-    var pct = r.media===null ? 0 : r.media;
-    var color = pct>=90?'var(--ok)':pct>=70?'var(--warn)':'var(--bad)';
-    return '<div class="bar-row"><div class="bar-top"><span class="nm">'+esc(r.nm)+'</span><span class="pct">'+(r.media===null?'—':r.media+'%')+'</span></div>'+
-      '<div class="bar-track"><div class="bar-fill" style="width:'+pct+'%;background:'+color+';"></div></div>'+
-      '<div class="small-muted" style="margin-top:4px;">'+r.count+' inspeção(ões) · '+r.problemas+' não conformidade(s)</div></div>';
-  }).join('');
-
-  return topbar('Dashboard Analítico','Índice de conformidade das inspeções',false)+
-  '<div class="page">'+
-    '<div class="stat-grid">'+
-      '<div class="stat-card"><div class="num">'+mediaConf+'%</div><div class="lbl">Conformidade média</div></div>'+
-      '<div class="stat-card"><div class="num">'+total+'</div><div class="lbl">Inspeções realizadas</div></div>'+
-      '<div class="stat-card"><div class="num">'+totalEquip+'</div><div class="lbl">Equipamentos cadastrados</div></div>'+
-      '<div class="stat-card"><div class="num">'+totalPendAbertas+'</div><div class="lbl">Pendências em aberto</div></div>'+
-    '</div>'+
-    (maiorProblema && maiorProblema.problemas>0 ? '<div class="card" style="border-color:rgba(248,113,113,0.35);"><div class="small-muted" style="margin-bottom:4px;">⚠️ Área com mais problemas identificados</div><div style="font-size:16px;font-weight:700;">'+esc(maiorProblema.nm)+'</div><div class="small-muted">'+maiorProblema.problemas+' não conformidade(s) registrada(s)</div></div>' : '')+
-    '<div class="section-title">Índice de conformidade por área</div>'+
-    (total ? barsHtml : '<div class="empty"><div class="ic">📊</div><p>Realize inspeções para ver os indicadores</p></div>')+
-    '<div class="section-title">Chamados</div>'+
-    '<div class="stat-grid">'+
-      '<div class="stat-card"><div class="num">'+totalChamados+'</div><div class="lbl">Total de chamados</div></div>'+
-      '<div class="stat-card"><div class="num">'+chamAndamento+'</div><div class="lbl">Em andamento</div></div>'+
-      '<div class="stat-card"><div class="num">'+chamAguardando+'</div><div class="lbl">Aguardando atuação</div></div>'+
-      '<div class="stat-card"><div class="num">'+chamConcluido+'</div><div class="lbl">Concluídos</div></div>'+
-    '</div>'+
-    (chamCriticoAberto>0 ? '<div class="card" style="border-color:rgba(248,113,113,0.35);"><div class="small-muted" style="margin-bottom:4px;">⚠️ Chamados críticos em aberto</div><div style="font-size:16px;font-weight:700;">'+chamCriticoAberto+' chamado(s) crítico(s) pendente(s) de conclusão</div></div>' : '')+
-  '</div>';
+  var total=state.inspecoes.length;
+  var totalEquip=state.equipamentos.length;
+  var totalPendAbertas=state.pendencias.filter(function(p){return p.status==='aberto'||p.status==='andamento';}).length;
+  var mediaConf=total?Math.round(state.inspecoes.reduce(function(s,i){return s+i.conformidade;},0)/total):0;
+  var naoConformes=state.inspecoes.filter(function(i){return i.conformidade<90;}).length;
+  var porArea={};AREAS.forEach(function(a){porArea[a.nome]={conf:[],problemas:0};});
+  state.inspecoes.forEach(function(i){if(!porArea[i.areaNome])porArea[i.areaNome]={conf:[],problemas:0};porArea[i.areaNome].conf.push(i.conformidade);porArea[i.areaNome].problemas+=i.problemas;});
+  var areaRows=Object.keys(porArea).map(function(nm){var d=porArea[nm],media=d.conf.length?Math.round(d.conf.reduce(function(a,b){return a+b;},0)/d.conf.length):null;return {nm:nm,media:media,problemas:d.problemas,count:d.conf.length};});
+  var barsHtml=areaRows.map(function(r){var pct=r.media===null?0:r.media;var color=pct>=90?'var(--ok)':pct>=70?'var(--warn)':'var(--bad)';return '<div class="bar-row"><div class="bar-top"><span class="nm">'+esc(r.nm)+'</span><span class="pct">'+(r.media===null?'—':r.media+'%')+'</span></div><div class="bar-track"><div class="bar-fill" style="width:'+pct+'%;background:'+color+'"></div></div><div class="small-muted" style="margin-top:4px">'+r.count+' inspeção(ões) · '+r.problemas+' não conformidade(s)</div></div>';}).join('');
+  var attention=state.pendencias.filter(function(p){return p.status==='aberto'||p.status==='andamento';}).slice(0,6).map(function(p){return '<div class="attention-item"><div><b>'+esc(p.titulo)+'</b><br><span>'+esc(p.areaNome)+' · '+esc(p.unidadeNome)+'</span></div><span class="badge '+(p.status==='andamento'?'badge-warn':'badge-bad')+'">'+(p.status==='andamento'?'Em andamento':'Em aberto')+'</span></div>';}).join('');
+  return topbar('Dashboard','Visão geral das inspeções',false)+'<div class="page"><div class="dashboard-kpis"><div class="kpi-modern"><div class="kicon">📋</div><div><div class="kval">'+total+'</div><div class="klab">Inspeções realizadas</div></div></div><div class="kpi-modern"><div class="kicon">◉</div><div><div class="kval">'+mediaConf+'%</div><div class="klab">Conformidade média</div></div></div><div class="kpi-modern"><div class="kicon">⚠</div><div><div class="kval">'+naoConformes+'</div><div class="klab">Não conformes</div></div></div><div class="kpi-modern"><div class="kicon">📌</div><div><div class="kval">'+totalPendAbertas+'</div><div class="klab">Pendências abertas</div></div></div></div><div class="dashboard-grid"><div class="dash-panel"><h3>Conformidade por área</h3>'+(total?barsHtml:'<div class="empty"><p>Realize inspeções para ver os indicadores</p></div>')+'</div><div class="dash-panel"><h3>Pendências que exigem atenção</h3><div class="attention-list">'+(attention||'<div class="small-muted">Nenhuma pendência em aberto.</div>')+'</div></div></div><div class="section-title">Base operacional</div><div class="stat-grid"><div class="stat-card"><div class="num">'+totalEquip+'</div><div class="lbl">Equipamentos cadastrados</div></div><div class="stat-card"><div class="num">'+AREAS.length+'</div><div class="lbl">Áreas monitoradas</div></div></div></div>';
 }
 
 // ================= PENDENCIAS =================
 function renderPendencias(){
-  var cols = [
-    {id:'aberto', label:'Em aberto', color:'var(--bad)'},
-    {id:'andamento', label:'Em andamento', color:'var(--warn)'},
-    {id:'concluida', label:'Concluída', color:'var(--ok)'},
-    {id:'cancelada', label:'Cancelada', color:'var(--muted)'},
-  ];
-  var body = cols.map(function(c){
-    var items = state.pendencias.filter(function(p){return p.status===c.id;});
-    var cardsHtml = items.map(function(p){
-      var statusChips = cols.map(function(c2){
-        return '<div class="chip '+(p.status===c2.id?'active':'')+'" data-pendstatus="'+p.id+'" data-newstatus="'+c2.id+'">'+c2.label+'</div>';
-      }).join('');
-      return '<div class="pend-card"><div class="pt">'+esc(p.titulo)+'</div>'+
-        '<div class="pd">'+esc(p.areaNome)+' · '+esc(p.unidadeNome)+'<br>'+esc(p.descricao)+'</div>'+
-        '<div class="pend-status-row">'+statusChips+'</div></div>';
-    }).join('');
-    return '<div class="kanban-col"><div class="kanban-col-head"><span class="dot" style="background:'+c.color+';"></span><h3>'+c.label+'</h3><span class="count">'+items.length+'</span></div>'+
-      (items.length?cardsHtml:'<div class="small-muted" style="padding:4px 0 8px;">Nenhum item</div>')+
-    '</div>';
-  }).join('');
-
-  return topbar('Pendências','Acompanhamento de ações abertas, em andamento, concluídas e canceladas',false)+
-    '<div class="page"><div class="kanban-board">'+body+'</div></div>'+
-    '<button class="fab" id="btnNovaPend">+</button>';
+  var cols=[{id:'aberto',label:'Em aberto',color:'var(--bad)'},{id:'andamento',label:'Em andamento',color:'var(--warn)'},{id:'concluida',label:'Concluída',color:'var(--ok)'},{id:'cancelada',label:'Cancelada',color:'var(--muted)'}];
+  var counts={};cols.forEach(function(c){counts[c.id]=state.pendencias.filter(function(p){return p.status===c.id;}).length;});
+  var body=cols.map(function(c){var items=state.pendencias.filter(function(p){return p.status===c.id;});var cardsHtml=items.map(function(p){var statusChips=cols.map(function(c2){return '<div class="chip '+(p.status===c2.id?'active':'')+'" data-pendstatus="'+p.id+'" data-newstatus="'+c2.id+'">'+c2.label+'</div>';}).join('');return '<div class="pend-card"><div class="pt">'+esc(p.titulo)+'</div><div class="pd">'+esc(p.areaNome)+' · '+esc(p.unidadeNome)+'<br>'+esc(p.descricao)+'</div><div class="pend-status-row">'+statusChips+'</div></div>';}).join('');return '<div class="kanban-col"><div class="kanban-col-head"><span class="dot" style="background:'+c.color+'"></span><h3>'+c.label+'</h3><span class="count">'+items.length+'</span></div>'+(items.length?cardsHtml:'<div class="small-muted" style="padding:8px 0">Nenhum item</div>')+'</div>';}).join('');
+  return topbar('Pendências','Acompanhamento das ações geradas pelas inspeções',false)+'<div class="page"><div class="pend-kpis"><div class="stat-card"><div class="num">'+state.pendencias.length+'</div><div class="lbl">Total</div></div><div class="stat-card"><div class="num">'+counts.aberto+'</div><div class="lbl">Em aberto</div></div><div class="stat-card"><div class="num">'+counts.andamento+'</div><div class="lbl">Em andamento</div></div><div class="stat-card"><div class="num">'+counts.concluida+'</div><div class="lbl">Concluídas</div></div></div><div class="kanban-board">'+body+'</div></div><button class="fab" id="btnNovaPend">+</button>';
 }
 
 // ================= CHAMADOS =================
