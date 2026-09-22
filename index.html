@@ -408,6 +408,16 @@ html[data-theme="light"] .inspection-progress,html[data-theme="light"] .grupo-ca
 @media(max-width:1050px){.home-area-grid,.equip-grid{grid-template-columns:repeat(2,1fr)}.dashboard-main-grid{grid-template-columns:1fr}.status-wrap{grid-template-columns:1fr 1fr}.topbar-date{display:none}}
 @media(max-width:720px){.page{padding:14px}.topbar{padding:12px 14px;min-height:72px}.brand-logo{width:46px;height:46px}.topbar h1{font-size:18px}.topbar-actions{padding-right:44px}.user-chip{display:none}.home-stats,.dashboard-kpis,.history-kpis,.pend-kpis{grid-template-columns:1fr 1fr}.home-area-grid,.equip-grid{grid-template-columns:1fr}.form-grid-2{grid-template-columns:1fr}.history-row{grid-template-columns:1fr 90px}.history-row>*:nth-child(1),.history-row>*:nth-child(3),.history-row>*:nth-child(5){display:none}.home-hero h2{font-size:28px}.btn-row{bottom:68px}.screen-headline{align-items:flex-start;flex-direction:column}.equip-toolbar{flex-direction:column;align-items:stretch}.bottomnav-inner{gap:2px}.navbtn{font-size:9px}.status-wrap{grid-template-columns:1fr}.status-donut{width:180px;height:180px}.attention-head{display:none}.attention-row{grid-template-columns:1fr auto}.attention-row .at-area,.attention-row .at-action{display:none}.kpi-modern{min-height:92px;padding:14px}.kpi-modern .kicon{width:48px;height:48px}.kpi-modern .kval{font-size:26px}.kpi-ring{width:52px;height:52px}.kpi-ring:after{width:36px;height:36px}.kpi-ring b{font-size:15px}}
 
+
+/* ===== MODO APRESENTACAO / TV ===== */
+.tv-shell{min-height:100vh;background:radial-gradient(circle at 18% 8%,#0d2736 0,#081723 38%,#06121d 100%);color:#eef7ff;padding:18px 22px 14px;box-sizing:border-box;overflow:hidden}
+.tv-header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(141,186,218,.18);padding:0 4px 14px;margin-bottom:16px}.tv-brand{display:flex;align-items:center;gap:14px}.tv-brand img{width:60px;height:52px;object-fit:contain;border-radius:10px}.tv-brand h1{font-size:28px;line-height:1;margin:0;letter-spacing:.03em}.tv-brand p{margin:6px 0 0;color:#9fb7ca;font-size:14px}.tv-header-right{display:flex;align-items:center;gap:10px}.tv-clock{min-width:240px;background:#111f2f;border:1px solid #263c50;border-radius:14px;padding:8px 16px;display:flex;gap:14px;align-items:center;justify-content:center}.tv-clock b{font-size:14px;text-transform:capitalize}.tv-clock span{font-size:22px;font-weight:900;color:#2dde86}.tv-btn{border:1px solid #2b4358;background:#13263a;color:#fff;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer}.tv-btn:hover{background:#1a334c}.tv-exit{border-color:#5b3440;color:#ff8e99}
+.tv-kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:14px}.tv-kpi{min-height:112px;border:1px solid #263b50;border-radius:17px;background:linear-gradient(145deg,#142638,#0d1d2c);display:flex;align-items:center;gap:14px;padding:15px 17px;box-shadow:0 10px 28px rgba(0,0,0,.18)}.tv-kpi span{display:block;color:#c9dae7;font-size:12px;font-weight:800;letter-spacing:.05em}.tv-kpi b{display:block;font-size:34px;line-height:1.05;margin-top:5px}.tv-kpi small{display:block;color:#7e9bb1;margin-top:5px;font-size:12px}.tv-kicon{width:58px;height:58px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:27px;background:rgba(255,255,255,.06)}.tv-kpi.green .tv-kicon{background:rgba(45,222,134,.14)}.tv-kpi.red .tv-kicon{background:rgba(255,89,89,.14)}.tv-kpi.blue .tv-kicon{background:rgba(47,156,255,.14)}.tv-kpi.purple .tv-kicon{background:rgba(151,105,255,.14)}.tv-ring{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(#2dde86 calc(var(--p)*1%),#203449 0);position:relative;display:grid;place-items:center;flex:none}.tv-ring:before{content:"";position:absolute;inset:8px;background:#102132;border-radius:50%}.tv-ring b{position:relative;font-size:18px;margin:0}
+.tv-main-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:14px;margin-bottom:14px}.tv-panel{background:linear-gradient(160deg,#102235,#0b1b2a);border:1px solid #273d52;border-radius:18px;box-shadow:0 12px 30px rgba(0,0,0,.16)}.tv-panel-head{display:flex;align-items:center;justify-content:space-between;padding:15px 18px;border-bottom:1px solid rgba(134,177,209,.14)}.tv-panel-head h2{font-size:20px;margin:0}.tv-panel-head span{color:#7899b1;font-size:12px}.tv-areas{padding:10px 18px 13px}.tv-area-row{margin:9px 0}.tv-area-line{display:flex;justify-content:space-between;align-items:center;font-size:14px}.tv-area-line strong{font-size:16px}.tv-bar{height:10px;background:#20354a;border-radius:999px;margin-top:5px;overflow:hidden}.tv-bar span{display:block;height:100%;border-radius:999px}.tv-area-row small{font-size:11px;color:#718da3;display:block;margin-top:4px}
+.tv-status{display:grid;grid-template-columns:230px 1fr;gap:10px;padding:18px;align-items:center}.tv-donut{width:205px;height:205px;border-radius:50%;background:conic-gradient(#2dde86 0 calc(var(--c1)*1%),#ff5959 calc(var(--c1)*1%) calc((var(--c1) + var(--c2))*1%),#ffc83d calc((var(--c1) + var(--c2))*1%) calc((var(--c1) + var(--c2) + var(--c3))*1%),#2f9cff calc((var(--c1) + var(--c2) + var(--c3))*1%) 100%);display:grid;place-items:center;position:relative;margin:auto}.tv-donut:before{content:"";position:absolute;inset:39px;background:#0d1e2d;border-radius:50%;box-shadow:inset 0 0 20px rgba(0,0,0,.25)}.tv-donut>div{position:relative;text-align:center}.tv-donut b{font-size:44px;display:block;line-height:1}.tv-donut span{color:#c4d4df;font-size:14px}.tv-legend{display:grid;gap:12px}.tv-legend>div{display:grid;grid-template-columns:16px 1fr auto;gap:10px;align-items:center}.tv-legend i{width:14px;height:14px;border-radius:50%}.tv-legend span{font-size:14px;color:#c6d6e2}.tv-legend b{font-size:16px}.tv-legend small{font-weight:500;color:#7f9db3}
+.tv-pend{min-height:180px}.tv-pend-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:12px 16px 16px}.tv-pend-row{border:1px solid #283d50;background:#132538;border-radius:13px;padding:11px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:52px}.tv-pend-row b{font-size:13px;display:block;line-height:1.2}.tv-pend-row small{display:block;color:#7e9ab0;font-size:10px;margin-top:4px}.tv-badge-warn,.tv-badge-bad{font-size:10px;font-weight:900;padding:5px 8px;border-radius:999px;white-space:nowrap}.tv-badge-warn{background:rgba(255,200,61,.16);color:#ffd75c}.tv-badge-bad{background:rgba(255,89,89,.16);color:#ff7f7f}.tv-empty{color:#7893a7;padding:20px;text-align:center}.tv-footer{height:32px;display:flex;align-items:center;justify-content:space-between;color:#69869d;font-size:11px;padding:0 4px}.tv-footer span:first-child{color:#2dde86}
+@media (min-width:1800px){.tv-shell{padding:24px 34px 16px}.tv-header{height:90px}.tv-brand img{width:72px;height:62px}.tv-brand h1{font-size:34px}.tv-kpis{gap:16px}.tv-kpi{min-height:128px}.tv-kpi b{font-size:42px}.tv-panel-head h2{font-size:24px}.tv-status{grid-template-columns:280px 1fr}.tv-donut{width:245px;height:245px}.tv-donut:before{inset:46px}.tv-donut b{font-size:52px}.tv-areas{padding-top:18px}.tv-area-row{margin:14px 0}.tv-area-line{font-size:17px}.tv-bar{height:12px}.tv-pend-list{grid-template-columns:repeat(3,1fr);gap:13px}.tv-pend-row{min-height:64px}.tv-pend-row b{font-size:15px}}
+@media (max-width:1100px){.tv-shell{overflow:auto}.tv-kpis{grid-template-columns:repeat(2,1fr)}.tv-main-grid{grid-template-columns:1fr}.tv-pend-list{grid-template-columns:1fr 1fr}.tv-header{height:auto;align-items:flex-start;gap:12px}.tv-header-right{flex-wrap:wrap;justify-content:flex-end}.tv-clock{min-width:190px}.tv-status{grid-template-columns:200px 1fr}.tv-donut{width:180px;height:180px}}
 </style>
 </head>
 <body>
@@ -730,7 +740,7 @@ var state = {
   pendencias: [],
   chamados: [],
   loaded: false,
-  view: 'checklist', // checklist | equipamentos | historico | dashboard | pendencias | chamados
+  view: 'checklist', // checklist | equipamentos | historico | dashboard | apresentacao | pendencias | chamados
   nav: [], // navigation stack for checklist drilldown
   currentChecklist: null, // {areaId, areaNome, unidadeId, unidadeNome, equipamentoId, respostas}
   editingEquip: null,
@@ -914,10 +924,11 @@ function render(){
   else if(state.view === 'equipamentos') html = renderEquipamentosRoute();
   else if(state.view === 'historico') html = renderHistoricoRoute();
   else if(state.view === 'dashboard') html = renderDashboard();
+  else if(state.view === 'apresentacao') html = renderPresentation();
   else if(state.view === 'pendencias') html = renderPendencias();
   else if(state.view === 'chamados') html = renderChamadosRoute();
 
-  html += renderBottomNav();
+  if(state.view !== 'apresentacao') html += renderBottomNav();
   app.innerHTML = html;
   afterRender();
 }
@@ -928,6 +939,7 @@ function renderBottomNav(){
     {id:'equipamentos', ic:'🗄️', label:'Equipamentos'},
     {id:'historico', ic:'🕓', label:'Histórico'},
     {id:'dashboard', ic:'📊', label:'Dashboard'},
+    {id:'apresentacao', ic:'📺', label:'Apresentação'},
     {id:'pendencias', ic:'📌', label:'Pendências'},
   ];
   var btns = items.map(function(it){
@@ -1294,6 +1306,76 @@ function renderDashboard(){
   '</div>';
 }
 
+// ================= MODO APRESENTACAO / TV =================
+function renderPresentation(){
+  var total=state.inspecoes.length;
+  var totalEquip=state.equipamentos.length;
+  var abertas=state.pendencias.filter(function(p){return p.status==='aberto';}).length;
+  var andamento=state.pendencias.filter(function(p){return p.status==='andamento';}).length;
+  var totalPend=abertas+andamento;
+  var mediaConf=total?Math.round(state.inspecoes.reduce(function(s,i){return s+(Number(i.conformidade)||0);},0)/total):0;
+  var naoConformes=state.inspecoes.filter(function(i){return (Number(i.conformidade)||0)<90;}).length;
+
+  var porArea={};
+  AREAS.forEach(function(a){porArea[a.nome]={conf:[],problemas:0};});
+  state.inspecoes.forEach(function(i){
+    if(!porArea[i.areaNome]) porArea[i.areaNome]={conf:[],problemas:0};
+    porArea[i.areaNome].conf.push(Number(i.conformidade)||0);
+    porArea[i.areaNome].problemas+=Number(i.problemas)||0;
+  });
+  var areaRows=Object.keys(porArea).map(function(nm){
+    var d=porArea[nm];
+    var media=d.conf.length?Math.round(d.conf.reduce(function(a,b){return a+b;},0)/d.conf.length):0;
+    return {nm:nm,media:media,count:d.conf.length,problemas:d.problemas};
+  });
+  var bars=areaRows.map(function(r){
+    var c=r.media>=90?'#2dde86':r.media>=70?'#ffc83d':'#ff5959';
+    return '<div class="tv-area-row"><div class="tv-area-line"><b>'+esc(r.nm)+'</b><strong>'+r.media+'%</strong></div><div class="tv-bar"><span style="width:'+r.media+'%;background:'+c+'"></span></div><small>'+r.count+' inspeção(ões) · '+r.problemas+' não conformidade(s)</small></div>';
+  }).join('');
+
+  var statusCounts={conforme:0,nao:0,pendencia:0,andamento:0};
+  state.inspecoes.forEach(function(i){
+    var rel=state.pendencias.filter(function(p){return p.origemInspecaoId===i.id && p.status!=='concluida' && p.status!=='cancelada';});
+    if(rel.some(function(p){return p.status==='andamento';})) statusCounts.andamento++;
+    else if(rel.some(function(p){return p.status==='aberto';})) statusCounts.pendencia++;
+    else if((Number(i.conformidade)||0)>=90) statusCounts.conforme++;
+    else statusCounts.nao++;
+  });
+  function pct(n){return total?Math.round(n/total*1000)/10:0;}
+  var p1=pct(statusCounts.conforme), p2=pct(statusCounts.nao), p3=pct(statusCounts.pendencia), p4=Math.max(0,Math.round((100-p1-p2-p3)*10)/10);
+  if(!total){p1=p2=p3=p4=0;}
+
+  var pendList=state.pendencias.filter(function(p){return p.status==='aberto'||p.status==='andamento';}).slice(0,6);
+  var pendRows=pendList.map(function(p){
+    var st=p.status==='andamento'?'Em andamento':'Em aberto';
+    var cls=p.status==='andamento'?'tv-badge-warn':'tv-badge-bad';
+    return '<div class="tv-pend-row"><div><b>'+esc(p.titulo||'Pendência')+'</b><small>'+esc((p.areaNome||'—')+' · '+(p.unidadeNome||'—'))+'</small></div><span class="'+cls+'">'+st+'</span></div>';
+  }).join('') || '<div class="tv-empty">Nenhuma pendência em aberto.</div>';
+
+  return '<div class="tv-shell">'+
+    '<div class="tv-header"><div class="tv-brand"><img src="'+LOGO_SRC+'" alt="FS"><div><h1>MODO APRESENTAÇÃO</h1><p>Manutenção · Visão em tempo real</p></div></div>'+ 
+    '<div class="tv-header-right"><div class="tv-clock"><b id="tvDate">--/--/----</b><span id="tvClock">--:--:--</span></div><button class="tv-btn" id="tvFullscreen">⛶ Tela cheia</button><button class="tv-btn tv-exit" id="tvExit">✕ Sair</button></div></div>'+ 
+    '<div class="tv-kpis">'+
+      '<div class="tv-kpi green"><div class="tv-kicon">📋</div><div><span>INSPEÇÕES</span><b>'+total+'</b><small>Realizadas</small></div></div>'+ 
+      '<div class="tv-kpi cyan"><div class="tv-ring" style="--p:'+mediaConf+'"><b>'+mediaConf+'%</b></div><div><span>CONFORMIDADE</span><small>Meta 90%</small></div></div>'+ 
+      '<div class="tv-kpi red"><div class="tv-kicon">⚠</div><div><span>NÃO CONFORMES</span><b>'+naoConformes+'</b><small>Abaixo de 90%</small></div></div>'+ 
+      '<div class="tv-kpi blue"><div class="tv-kicon">🔧</div><div><span>PENDÊNCIAS</span><b>'+totalPend+'</b><small>'+abertas+' abertas · '+andamento+' andamento</small></div></div>'+ 
+      '<div class="tv-kpi purple"><div class="tv-kicon">⚙</div><div><span>EQUIPAMENTOS</span><b>'+totalEquip+'</b><small>Cadastrados</small></div></div>'+ 
+    '</div>'+ 
+    '<div class="tv-main-grid">'+
+      '<section class="tv-panel"><div class="tv-panel-head"><h2>Conformidade por área</h2><span>Atualização automática</span></div><div class="tv-areas">'+(bars||'<div class="tv-empty">Sem inspeções registradas.</div>')+'</div></section>'+ 
+      '<section class="tv-panel"><div class="tv-panel-head"><h2>Status das inspeções</h2><span>'+total+' inspeções</span></div><div class="tv-status"><div class="tv-donut" style="--c1:'+p1+';--c2:'+p2+';--c3:'+p3+';--c4:'+p4+'"><div><b>'+total+'</b><span>Inspeções</span></div></div><div class="tv-legend">'+
+        '<div><i style="background:#2dde86"></i><span>Conformes</span><b>'+statusCounts.conforme+' <small>'+pct(statusCounts.conforme)+'%</small></b></div>'+ 
+        '<div><i style="background:#ff5959"></i><span>Não conformes</span><b>'+statusCounts.nao+' <small>'+pct(statusCounts.nao)+'%</small></b></div>'+ 
+        '<div><i style="background:#ffc83d"></i><span>Pendências</span><b>'+statusCounts.pendencia+' <small>'+pct(statusCounts.pendencia)+'%</small></b></div>'+ 
+        '<div><i style="background:#2f9cff"></i><span>Em andamento</span><b>'+statusCounts.andamento+' <small>'+pct(statusCounts.andamento)+'%</small></b></div>'+ 
+      '</div></div></section>'+ 
+    '</div>'+ 
+    '<section class="tv-panel tv-pend"><div class="tv-panel-head"><h2>Pendências que exigem atenção</h2><span>'+totalPend+' ativa(s)</span></div><div class="tv-pend-list">'+pendRows+'</div></section>'+ 
+    '<div class="tv-footer"><span>● Firebase online · atualização em tempo real</span><b>FS Manutenção</b></div>'+ 
+  '</div>';
+}
+
 // ================= PENDENCIAS =================
 function renderPendencias(){
   var cols=[{id:'aberto',label:'Em aberto',color:'var(--bad)'},{id:'andamento',label:'Em andamento',color:'var(--warn)'},{id:'concluida',label:'Concluída',color:'var(--ok)'},{id:'cancelada',label:'Cancelada',color:'var(--muted)'}];
@@ -1401,6 +1483,26 @@ function openNovoChamadoSheet(){
 
 // ================= EVENT BINDING =================
 function bindPageEvents(){
+  if(window.__tvClockTimer){ clearInterval(window.__tvClockTimer); window.__tvClockTimer=null; }
+  if(state.view==='apresentacao'){
+    function updateTvClock(){
+      var d=new Date(), de=document.getElementById('tvDate'), ce=document.getElementById('tvClock');
+      if(de) de.textContent=d.toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'2-digit',year:'numeric'});
+      if(ce) ce.textContent=d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+    }
+    updateTvClock();
+    window.__tvClockTimer=setInterval(updateTvClock,1000);
+    var fs=document.getElementById('tvFullscreen');
+    if(fs) fs.addEventListener('click',function(){
+      if(!document.fullscreenElement && document.documentElement.requestFullscreen) document.documentElement.requestFullscreen();
+      else if(document.exitFullscreen) document.exitFullscreen();
+    });
+    var ex=document.getElementById('tvExit');
+    if(ex) ex.addEventListener('click',function(){
+      if(document.fullscreenElement && document.exitFullscreen) document.exitFullscreen();
+      setView('dashboard');
+    });
+  }
   var themeToggleBtn = document.getElementById('themeToggle');
   if(themeToggleBtn) themeToggleBtn.addEventListener('click', function(){ toggleTheme(); });
 
