@@ -429,7 +429,7 @@ function T_celula() {
     q('eletrica', 'Parte elétrica do equipamento está devidamente adequada?', { obsOn: 'nao', obsLabel: 'Descreva o desvio', bad: 'nao' }),
     q('afericoes', 'As aferições estão sendo feitas corretamente?', { obsOn: 'nao', obsLabel: 'Descreva o desvio', bad: 'nao' }),
     q('dif_peso', 'Existe diferença de peso acima do aceitável para esta célula?', { obsOn: 'sim', obsLabel: 'Descreva a diferença', bad: 'sim' }),
-    q('chamado_toledo', 'Existe algum chamado para Toledo em aberto para verificação ou outra ação em andamento para correção?', { obsOn: 'nao', obsLabel: 'Descreva o porquê', bad: 'nao' }),
+    q('chamado_toledo', 'Existe algum chamado para Toledo em aberto para verificação ou outra ação em andamento para correção?', { obsOn: 'sim', obsLabel: 'Descreva o porquê', bad: 'nao' }),
     q('previsao', 'Existe uma previsão para um retorno sobre chamado ou outra atuação?', { obsOn: 'sim', obsLabel: 'Data prevista', bad: null }),
     q('atencao', 'Existe algo para deixar como ponto de atenção para este equipamento?', { obsOn: 'sim', obsLabel: 'Descreva a necessidade', bad: 'sim' }),
   ];
