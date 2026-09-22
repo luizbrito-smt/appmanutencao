@@ -418,75 +418,6 @@ html[data-theme="light"] .inspection-progress,html[data-theme="light"] .grupo-ca
 .tv-pend{min-height:180px}.tv-pend-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:12px 16px 16px}.tv-pend-row{border:1px solid #283d50;background:#132538;border-radius:13px;padding:11px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:52px}.tv-pend-row b{font-size:13px;display:block;line-height:1.2}.tv-pend-row small{display:block;color:#7e9ab0;font-size:10px;margin-top:4px}.tv-badge-warn,.tv-badge-bad{font-size:10px;font-weight:900;padding:5px 8px;border-radius:999px;white-space:nowrap}.tv-badge-warn{background:rgba(255,200,61,.16);color:#ffd75c}.tv-badge-bad{background:rgba(255,89,89,.16);color:#ff7f7f}.tv-empty{color:#7893a7;padding:20px;text-align:center}.tv-footer{height:32px;display:flex;align-items:center;justify-content:space-between;color:#69869d;font-size:11px;padding:0 4px}.tv-footer span:first-child{color:#2dde86}
 @media (min-width:1800px){.tv-shell{padding:24px 34px 16px}.tv-header{height:90px}.tv-brand img{width:72px;height:62px}.tv-brand h1{font-size:34px}.tv-kpis{gap:16px}.tv-kpi{min-height:128px}.tv-kpi b{font-size:42px}.tv-panel-head h2{font-size:24px}.tv-status{grid-template-columns:280px 1fr}.tv-donut{width:245px;height:245px}.tv-donut:before{inset:46px}.tv-donut b{font-size:52px}.tv-areas{padding-top:18px}.tv-area-row{margin:14px 0}.tv-area-line{font-size:17px}.tv-bar{height:12px}.tv-pend-list{grid-template-columns:repeat(3,1fr);gap:13px}.tv-pend-row{min-height:64px}.tv-pend-row b{font-size:15px}}
 @media (max-width:1100px){.tv-shell{overflow:auto}.tv-kpis{grid-template-columns:repeat(2,1fr)}.tv-main-grid{grid-template-columns:1fr}.tv-pend-list{grid-template-columns:1fr 1fr}.tv-header{height:auto;align-items:flex-start;gap:12px}.tv-header-right{flex-wrap:wrap;justify-content:flex-end}.tv-clock{min-width:190px}.tv-status{grid-template-columns:200px 1fr}.tv-donut{width:180px;height:180px}}
-
-/* ===== MODO APRESENTACAO - EXPANSAO PARA TV / TELA CHEIA ===== */
-body.presentation-active{overflow:hidden;}
-#app.presentation-mode{max-width:none!important;width:100%!important;margin:0!important;padding-bottom:0!important;}
-#app.presentation-mode .tv-shell{width:100%;max-width:none;margin:0 auto;}
-html:fullscreen,html:fullscreen body{width:100%;height:100%;overflow:hidden;background:#06121d;}
-html:fullscreen #app{max-width:none!important;width:100vw!important;height:100vh!important;margin:0!important;padding:0!important;}
-html:fullscreen .tv-shell{
-  width:100vw!important;
-  height:100vh!important;
-  min-height:100vh!important;
-  max-width:none!important;
-  margin:0!important;
-  padding:18px 26px 12px!important;
-  display:grid!important;
-  grid-template-rows:auto auto minmax(0,1fr) auto auto!important;
-  gap:14px!important;
-  box-sizing:border-box!important;
-  overflow:hidden!important;
-}
-html:fullscreen .tv-header,html:fullscreen .tv-kpis,html:fullscreen .tv-main-grid{margin-bottom:0!important;}
-html:fullscreen .tv-header{height:auto!important;min-height:74px!important;padding-bottom:10px!important;}
-html:fullscreen .tv-brand img{width:68px!important;height:58px!important;}
-html:fullscreen .tv-brand h1{font-size:32px!important;}
-html:fullscreen .tv-brand p{font-size:15px!important;}
-html:fullscreen .tv-clock{min-width:265px!important;padding:10px 18px!important;}
-html:fullscreen .tv-clock b{font-size:15px!important;}
-html:fullscreen .tv-clock span{font-size:24px!important;}
-html:fullscreen .tv-btn{padding:13px 18px!important;font-size:14px!important;}
-html:fullscreen .tv-kpis{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:16px!important;}
-html:fullscreen .tv-kpi{min-height:122px!important;padding:16px 18px!important;}
-html:fullscreen .tv-kpi span{font-size:13px!important;}
-html:fullscreen .tv-kpi b{font-size:40px!important;}
-html:fullscreen .tv-kpi small{font-size:12px!important;}
-html:fullscreen .tv-kicon{width:64px!important;height:64px!important;font-size:30px!important;}
-html:fullscreen .tv-ring{width:72px!important;height:72px!important;}
-html:fullscreen .tv-ring b{font-size:21px!important;}
-html:fullscreen .tv-main-grid{
-  grid-template-columns:minmax(0,1.28fr) minmax(430px,.72fr)!important;
-  gap:16px!important;
-  min-height:0!important;
-}
-html:fullscreen .tv-main-grid>.tv-panel{height:100%!important;min-height:0!important;overflow:hidden!important;}
-html:fullscreen .tv-panel-head{padding:16px 20px!important;}
-html:fullscreen .tv-panel-head h2{font-size:24px!important;}
-html:fullscreen .tv-panel-head span{font-size:13px!important;}
-html:fullscreen .tv-areas{padding:14px 20px 12px!important;height:calc(100% - 58px)!important;display:flex!important;flex-direction:column!important;justify-content:space-evenly!important;box-sizing:border-box!important;}
-html:fullscreen .tv-area-row{margin:5px 0!important;}
-html:fullscreen .tv-area-line{font-size:16px!important;}
-html:fullscreen .tv-area-line strong{font-size:18px!important;}
-html:fullscreen .tv-bar{height:12px!important;}
-html:fullscreen .tv-area-row small{font-size:11.5px!important;}
-html:fullscreen .tv-status{grid-template-columns:minmax(250px,.9fr) 1.1fr!important;gap:20px!important;height:calc(100% - 58px)!important;padding:18px 22px!important;box-sizing:border-box!important;}
-html:fullscreen .tv-donut{width:min(25vh,280px)!important;height:min(25vh,280px)!important;min-width:215px!important;min-height:215px!important;}
-html:fullscreen .tv-donut:before{inset:18%!important;}
-html:fullscreen .tv-donut b{font-size:52px!important;}
-html:fullscreen .tv-donut span{font-size:16px!important;}
-html:fullscreen .tv-legend{gap:16px!important;}
-html:fullscreen .tv-legend span{font-size:16px!important;}
-html:fullscreen .tv-legend b{font-size:18px!important;}
-html:fullscreen .tv-pend{min-height:190px!important;}
-html:fullscreen .tv-pend-list{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important;padding:13px 18px 16px!important;}
-html:fullscreen .tv-pend-row{min-height:58px!important;padding:12px 14px!important;}
-html:fullscreen .tv-pend-row b{font-size:14px!important;}
-html:fullscreen .tv-pend-row small{font-size:10.5px!important;}
-html:fullscreen .tv-footer{height:26px!important;font-size:11px!important;}
-@media (min-width:1800px){
-  #app.presentation-mode .tv-shell{padding-left:28px;padding-right:28px;}
-}
 </style>
 </head>
 <body>
@@ -983,9 +914,6 @@ function setView(v){
 
 function render(){
   var app = document.getElementById('app');
-  var isPresentation = state.view === 'apresentacao';
-  app.classList.toggle('presentation-mode', isPresentation);
-  document.body.classList.toggle('presentation-active', isPresentation);
   var html = '';
   if(!state.loaded){
     html = '<div class="empty"><div class="ic">⏳</div><p>Carregando...</p></div>';
@@ -1335,28 +1263,24 @@ function renderDashboard(){
   var areaRows=Object.keys(porArea).map(function(nm){var d=porArea[nm],media=d.conf.length?Math.round(d.conf.reduce(function(a,b){return a+b;},0)/d.conf.length):null;return {nm:nm,media:media,problemas:d.problemas,count:d.conf.length};});
   var barsHtml=areaRows.map(function(r){var pct=r.media===null?0:r.media;var color=pct>=90?'#2dde86':pct>=70?'#ffc83d':'#ff5959';return '<div class="bar-row"><div class="bar-top"><span class="nm">'+esc(r.nm)+'</span><span class="pct">'+(r.media===null?'—':r.media+'%')+'</span></div><div class="bar-track"><div class="bar-fill" style="width:'+pct+'%;background:'+color+'"></div></div><div class="small-muted" style="margin-top:4px">'+r.count+' inspeção(ões) · '+r.problemas+' não conformidade(s)</div></div>';}).join('');
 
-  // Status mutuamente exclusivos por inspeção: se houver ação em andamento, ela prevalece;
-  // depois pendência em aberto; sem pendência, usa-se o índice de conformidade da inspeção.
-  var statusCounts={conforme:0,nao:0,pendencia:0,andamento:0};
+  // Status calculado exclusivamente sobre as inspeções realizadas.
+  var statusCounts={conforme:0,nao:0,pendencia:pendAbertas,andamento:pendAndamento};
   state.inspecoes.forEach(function(i){
-    var relacionadas=state.pendencias.filter(function(p){return p.origemInspecaoId===i.id && p.status!=='concluida' && p.status!=='cancelada';});
-    if(relacionadas.some(function(p){return p.status==='andamento';})) statusCounts.andamento++;
-    else if(relacionadas.some(function(p){return p.status==='aberto';})) statusCounts.pendencia++;
-    else if(i.conformidade>=90) statusCounts.conforme++;
+    if((Number(i.conformidade)||0)>=90) statusCounts.conforme++;
     else statusCounts.nao++;
   });
   var statusTotal=Math.max(total,1);
   var pc1=Math.round(statusCounts.conforme/statusTotal*1000)/10;
   var pc2=Math.round(statusCounts.nao/statusTotal*1000)/10;
-  var pc3=Math.round(statusCounts.pendencia/statusTotal*1000)/10;
-  var pc4=Math.max(0,Math.round((100-pc1-pc2-pc3)*10)/10);
+  var pc3=0;
+  var pc4=0;
   if(!total){pc1=pc2=pc3=pc4=0;}
   function pctTxt(n){return total?Math.round(n/total*1000)/10:0;}
   var statusLegend=''+
     '<div class="status-row"><span class="status-dot" style="background:#26d77b;color:#26d77b"></span><span class="slab">Conformes</span><span class="sval">'+statusCounts.conforme+' ('+pctTxt(statusCounts.conforme)+'%)</span></div>'+ 
     '<div class="status-row"><span class="status-dot" style="background:#ff5959;color:#ff5959"></span><span class="slab">Não conformes</span><span class="sval">'+statusCounts.nao+' ('+pctTxt(statusCounts.nao)+'%)</span></div>'+ 
-    '<div class="status-row"><span class="status-dot" style="background:#ffc83d;color:#ffc83d"></span><span class="slab">Pendências</span><span class="sval">'+statusCounts.pendencia+' ('+pctTxt(statusCounts.pendencia)+'%)</span></div>'+ 
-    '<div class="status-row"><span class="status-dot" style="background:#2f9cff;color:#2f9cff"></span><span class="slab">Em andamento</span><span class="sval">'+statusCounts.andamento+' ('+pctTxt(statusCounts.andamento)+'%)</span></div>';
+    '<div class="status-row"><span class="status-dot" style="background:#ffc83d;color:#ffc83d"></span><span class="slab">Pendências abertas</span><span class="sval">'+statusCounts.pendencia+'</span></div>'+ 
+    '<div class="status-row"><span class="status-dot" style="background:#2f9cff;color:#2f9cff"></span><span class="slab">Ações em andamento</span><span class="sval">'+statusCounts.andamento+'</span></div>';
 
   var attentionRows=state.pendencias.filter(function(p){return p.status==='aberto'||p.status==='andamento';}).slice(0,8).map(function(p){
     return '<div class="attention-row"><div><div class="at-main">'+esc(p.titulo)+'</div><div class="at-sub">'+esc(p.unidadeNome||'—')+'</div></div><div class="at-area">'+esc(p.areaNome||'—')+'</div><div><span class="badge '+(p.status==='andamento'?'badge-warn':'badge-bad')+'">'+(p.status==='andamento'?'Em andamento':'Em aberto')+'</span></div><div class="at-action">Atenção</div></div>';
@@ -1405,16 +1329,17 @@ function renderPresentation(){
     return '<div class="tv-area-row"><div class="tv-area-line"><b>'+esc(r.nm)+'</b><strong>'+r.media+'%</strong></div><div class="tv-bar"><span style="width:'+r.media+'%;background:'+c+'"></span></div><small>'+r.count+' inspeção(ões) · '+r.problemas+' não conformidade(s)</small></div>';
   }).join('');
 
-  var statusCounts={conforme:0,nao:0,pendencia:0,andamento:0};
+  // Status das inspeções calculado exclusivamente sobre as inspeções realizadas.
+  // Conforme = inspeção com conformidade >= 90%. Não conforme = inspeção abaixo de 90%.
+  // Pendências e ações em andamento são exibidas como informações complementares e não
+  // participam das fatias do gráfico, evitando classificar uma inspeção como pendência.
+  var statusCounts={conforme:0,nao:0,pendencia:abertas,andamento:andamento};
   state.inspecoes.forEach(function(i){
-    var rel=state.pendencias.filter(function(p){return p.origemInspecaoId===i.id && p.status!=='concluida' && p.status!=='cancelada';});
-    if(rel.some(function(p){return p.status==='andamento';})) statusCounts.andamento++;
-    else if(rel.some(function(p){return p.status==='aberto';})) statusCounts.pendencia++;
-    else if((Number(i.conformidade)||0)>=90) statusCounts.conforme++;
+    if((Number(i.conformidade)||0)>=90) statusCounts.conforme++;
     else statusCounts.nao++;
   });
   function pct(n){return total?Math.round(n/total*1000)/10:0;}
-  var p1=pct(statusCounts.conforme), p2=pct(statusCounts.nao), p3=pct(statusCounts.pendencia), p4=Math.max(0,Math.round((100-p1-p2-p3)*10)/10);
+  var p1=pct(statusCounts.conforme), p2=pct(statusCounts.nao), p3=0, p4=0;
   if(!total){p1=p2=p3=p4=0;}
 
   var pendList=state.pendencias.filter(function(p){return p.status==='aberto'||p.status==='andamento';}).slice(0,6);
@@ -1439,8 +1364,8 @@ function renderPresentation(){
       '<section class="tv-panel"><div class="tv-panel-head"><h2>Status das inspeções</h2><span>'+total+' inspeções</span></div><div class="tv-status"><div class="tv-donut" style="--c1:'+p1+';--c2:'+p2+';--c3:'+p3+';--c4:'+p4+'"><div><b>'+total+'</b><span>Inspeções</span></div></div><div class="tv-legend">'+
         '<div><i style="background:#2dde86"></i><span>Conformes</span><b>'+statusCounts.conforme+' <small>'+pct(statusCounts.conforme)+'%</small></b></div>'+ 
         '<div><i style="background:#ff5959"></i><span>Não conformes</span><b>'+statusCounts.nao+' <small>'+pct(statusCounts.nao)+'%</small></b></div>'+ 
-        '<div><i style="background:#ffc83d"></i><span>Pendências</span><b>'+statusCounts.pendencia+' <small>'+pct(statusCounts.pendencia)+'%</small></b></div>'+ 
-        '<div><i style="background:#2f9cff"></i><span>Em andamento</span><b>'+statusCounts.andamento+' <small>'+pct(statusCounts.andamento)+'%</small></b></div>'+ 
+        '<div class="tv-legend-secondary"><i style="background:#ffc83d"></i><span>Pendências abertas</span><b>'+statusCounts.pendencia+'</b></div>'+ 
+        '<div class="tv-legend-secondary"><i style="background:#2f9cff"></i><span>Ações em andamento</span><b>'+statusCounts.andamento+'</b></div>'+ 
       '</div></div></section>'+ 
     '</div>'+ 
     '<section class="tv-panel tv-pend"><div class="tv-panel-head"><h2>Pendências que exigem atenção</h2><span>'+totalPend+' ativa(s)</span></div><div class="tv-pend-list">'+pendRows+'</div></section>'+ 
@@ -1569,14 +1494,6 @@ function bindPageEvents(){
       if(!document.fullscreenElement && document.documentElement.requestFullscreen) document.documentElement.requestFullscreen();
       else if(document.exitFullscreen) document.exitFullscreen();
     });
-    if(!window.__tvFullscreenBound){
-      window.__tvFullscreenBound=true;
-      document.addEventListener('fullscreenchange',function(){
-        if(state.view==='apresentacao'){
-          document.body.classList.toggle('tv-is-fullscreen', !!document.fullscreenElement);
-        }
-      });
-    }
     var ex=document.getElementById('tvExit');
     if(ex) ex.addEventListener('click',function(){
       if(document.fullscreenElement && document.exitFullscreen) document.exitFullscreen();
